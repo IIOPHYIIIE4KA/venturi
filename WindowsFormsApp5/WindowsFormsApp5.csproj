@@ -104,5 +104,59 @@
   <ItemGroup>
     <None Include="assets\394.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\V0c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\D.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\dTavg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\explain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\HD.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\i1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\i2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\K0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Mв.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Nч.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\p2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\q.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Vc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Vг.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\X2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\Kч.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\H_D.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
