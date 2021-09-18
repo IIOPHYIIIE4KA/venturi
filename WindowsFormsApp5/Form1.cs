@@ -456,5 +456,97 @@ namespace WindowsFormsApp5
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Double n = 0;
+            Double Ng = 0;
+            Double kg = 0;
+            Double dp = 0;
+            Double p1 = 0;
+            Double V1 = 0;
+            Double Mv = 0;
+            Double T2 = 0;
+            Double p2 = 0;
+            Double V2 = 0;
+            Double D = 0;
+            Double H = 0;
+            Double dpc = 0;
+            Double pc = 0;
+            Double Eg = 0;
+            Double w2 = 0;
+            Double d2 = 0;
+
+            Double V0 = 0;
+            Double E = 0;
+            Double Tg = 0;
+            Double P1 = 0;
+            Double p0 = 0;
+            Double z = 0;
+            Double P2 = 0;
+            Double Tn = 0;
+            Double zz = 0;
+            Double m = 0;
+            try
+            {
+                //Vgg = Convert.ToDouble(Vgtext.Text);
+                //Pbar = Convert.ToDouble(pBartext.Text);
+                //T = Convert.ToDouble(tText.Text);
+                //X = Convert.ToDouble(xText.Text) * 0.001;
+                //Pb = Convert.ToDouble(pBtext.Text);
+                //Fi = Convert.ToDouble(fiText.Text);
+                //dP = Convert.ToDouble(dPtext.Text);
+                //Pg = Convert.ToDouble(pgTextt.Text);
+                //Wg = Convert.ToDouble(wGtext.Text);
+
+                //V0c = (Vgg * 0.804 * 274 * (Pbar - Pg)) / (60 * (0.804 + X) * (273 + 300) * 101.3);
+                //tM = getTemp(V0c, T);
+                //i1 = 2480 + T * 1.96;
+                //i2 = 2489 + tM * 1.96;
+                //Q = V0c * (1.3 * (T - tM) + X * (i1 - i2));
+                //dTavg = ((T - tM - 5) - (tM - 20)) / (2.3 * Math.Log10((T - tM - 5) / (tM - 20)));
+                //Mb = Q / (Fi * (2778 - 84) + (1 - 0.5) * (230 - 84));
+                //x2 = X + (Fi * Mb) / V0c;
+                //Vg = V0c * (((0.804 + x2) * (273 + tM) * Pbar) / (0.804 * 273 * (Pbar + Pg)));
+                //p2 = ((1.3 + x2) * 0.804 * 273 * (Pbar + Pg)) / ((0.804 + x2) * (273 + tM) * Pbar);
+                //k0 = (116 + 525 * ((Mb) / (Vg * p2))) * (1 + 0.001 * 113);
+                //vc = Q * 1000 / (k0 * dTavg);
+                //d = Math.Sqrt(vc / (0.785 * Wg));
+                //h = vc / (0.785 * d * d);
+                //hd = h / d;
+                //Kch = dP + Pb * 1000 * 0.016 / Vg;
+                //Nch = 6.61 * 0.001 * Math.Pow(Kch, 0.891);
+                //n = 1 - (-Math.Exp(Nch));
+                //v0Label.Text = "= " + V0c.ToString();
+                //tmLabel.Text = "Температура мокрого термометра °С = " + tM.ToString();
+                //i1Label.Text = "= " + i1.ToString();
+                //i2Label.Text = "= " + i2.ToString();
+                //qLabel.Text = "= " + Q.ToString();
+                //dTlabel.Text = "= " + dTavg.ToString();
+                //mBlabel.Text = "= " + Mb.ToString();
+                //x2Label.Text = "= " + x2.ToString();
+                //vgLabel.Text = "= " + Vg.ToString();
+                //p2Label.Text = "= " + p2.ToString();
+                //k0Label.Text = "= " + k0.ToString();
+                //vClabel.Text = "= " + vc.ToString();
+                //dLabel.Text = "= " + d.ToString();
+                //hLabel.Text = "= " + h.ToString();
+                //HDLabel.Text = "= " + hd.ToString();
+                //p2Label.Text = "= " + p2.ToString();
+                //vClabel.Text = "= " + vc.ToString();
+                //dLabel.Text = "= " + d.ToString();
+                //kHlabel.Text = "= " + Kch.ToString();
+                //NLabel.Text = "= " + Nch.ToString();
+                //nuLabel.Text = "= " + n.ToString();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("Неверные данные, проверьте поля");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -60,15 +60,14 @@ namespace WindowsFormsApp5
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.buttoncalc1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tmLabel = new System.Windows.Forms.Label();
+            this.k0Label = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.pgTextt = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.nuLabel = new System.Windows.Forms.Label();
             this.NLabel = new System.Windows.Forms.Label();
@@ -109,6 +108,63 @@ namespace WindowsFormsApp5
             this.Vgtext = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label28 = new System.Windows.Forms.Label();
+            this.d_vent = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.zz_vent = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.d2_vent = new System.Windows.Forms.Label();
+            this.w2_vent = new System.Windows.Forms.Label();
+            this.eg_vent = new System.Windows.Forms.Label();
+            this.pc_vent = new System.Windows.Forms.Label();
+            this.dpc_vent = new System.Windows.Forms.Label();
+            this.h_vent = new System.Windows.Forms.Label();
+            this.v2_vent = new System.Windows.Forms.Label();
+            this.po2_vent = new System.Windows.Forms.Label();
+            this.t2_vent = new System.Windows.Forms.Label();
+            this.mv_vent = new System.Windows.Forms.Label();
+            this.v1_vent = new System.Windows.Forms.Label();
+            this.po1_vent = new System.Windows.Forms.Label();
+            this.dp_vent = new System.Windows.Forms.Label();
+            this.kg_vent = new System.Windows.Forms.Label();
+            this.ng_vent = new System.Windows.Forms.Label();
+            this.n_vent = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.tn_vent = new System.Windows.Forms.TextBox();
+            this.p2_vent = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.z_vent = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.p0_vent = new System.Windows.Forms.TextBox();
+            this.p1_vent = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.tg_vent = new System.Windows.Forms.TextBox();
+            this.label60 = new System.Windows.Forms.Label();
+            this.e_vent = new System.Windows.Forms.TextBox();
+            this.v0_vent = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.m_vent = new System.Windows.Forms.TextBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
@@ -125,23 +181,35 @@ namespace WindowsFormsApp5
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pgTextt = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.k0Label = new System.Windows.Forms.Label();
-            this.tmLabel = new System.Windows.Forms.Label();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
+            this.pictureBox30 = new System.Windows.Forms.PictureBox();
+            this.pictureBox31 = new System.Windows.Forms.PictureBox();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
+            this.pictureBox33 = new System.Windows.Forms.PictureBox();
+            this.pictureBox34 = new System.Windows.Forms.PictureBox();
+            this.pictureBox35 = new System.Windows.Forms.PictureBox();
+            this.pictureBox36 = new System.Windows.Forms.PictureBox();
+            this.pictureBox37 = new System.Windows.Forms.PictureBox();
+            this.pictureBox38 = new System.Windows.Forms.PictureBox();
+            this.pictureBox39 = new System.Windows.Forms.PictureBox();
+            this.pictureBox40 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
@@ -158,7 +226,23 @@ namespace WindowsFormsApp5
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
             this.SuspendLayout();
             // 
             // pgtextbox
@@ -391,6 +475,7 @@ namespace WindowsFormsApp5
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -433,30 +518,6 @@ namespace WindowsFormsApp5
             this.buttoncalc1.UseVisualStyleBackColor = true;
             this.buttoncalc1.Click += new System.EventHandler(this.buttoncalc1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp5.Properties.Resources._388;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 31);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Гидравлическое сопротивление скруббера Вентури (ΔP0) находят как \r\nсумму гидравли" +
-        "ческих сопротивлений трубы Вентури (ΔPг) и циклона-каплеуловителя (ΔPк):\r\n");
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::WindowsFormsApp5.Properties.Resources._393;
-            this.pictureBox6.Location = new System.Drawing.Point(28, 171);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(148, 55);
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox6, "где ε, — коэффициент сопротивления циклона принимается: = 30—33 — для прямоточных" +
-        " циклонов,\r\n = 70 — для циклонов ЦН24; wu — скорость газов в циклоне, должна нах" +
-        "одиться в пределах 2,5—4,5 м/с.");
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.button1);
@@ -498,53 +559,10 @@ namespace WindowsFormsApp5
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp5.Properties.Resources._389;
-            this.pictureBox2.Location = new System.Drawing.Point(24, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(152, 31);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox2, "Потеря давления в трубе Вентури (АрТ) ");
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WindowsFormsApp5.Properties.Resources._390;
-            this.pictureBox3.Location = new System.Drawing.Point(26, 158);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(115, 51);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::WindowsFormsApp5.Properties.Resources._391;
-            this.pictureBox4.Location = new System.Drawing.Point(237, 9);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(138, 51);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::WindowsFormsApp5.Properties.Resources._392;
-            this.pictureBox5.Location = new System.Drawing.Point(237, 222);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(138, 31);
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox5, "Для определения коэффициента сопротивления, обусловленного вводом жидкости εж для" +
-        " нормализованных \r\nтруб с центральным вводом жидкости в конфузор, можно воспольз" +
-        "оваться эмпирическим выражением");
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.tmLabel);
             this.tabPage3.Controls.Add(this.k0Label);
-            this.tabPage3.Controls.Add(this.pictureBox17);
             this.tabPage3.Controls.Add(this.label26);
             this.tabPage3.Controls.Add(this.pgTextt);
             this.tabPage3.Controls.Add(this.label27);
@@ -588,6 +606,7 @@ namespace WindowsFormsApp5
             this.tabPage3.Controls.Add(this.Vgtext);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Controls.Add(this.pictureBox17);
             this.tabPage3.Controls.Add(this.pictureBox23);
             this.tabPage3.Controls.Add(this.pictureBox22);
             this.tabPage3.Controls.Add(this.pictureBox21);
@@ -611,6 +630,50 @@ namespace WindowsFormsApp5
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Расчет полого форсуночного скруббера";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tmLabel
+            // 
+            this.tmLabel.AutoSize = true;
+            this.tmLabel.Location = new System.Drawing.Point(27, 502);
+            this.tmLabel.Name = "tmLabel";
+            this.tmLabel.Size = new System.Drawing.Size(211, 13);
+            this.tmLabel.TabIndex = 73;
+            this.tmLabel.Text = "Температура мокрого термометра °С = ";
+            // 
+            // k0Label
+            // 
+            this.k0Label.AutoSize = true;
+            this.k0Label.Location = new System.Drawing.Point(762, 476);
+            this.k0Label.Name = "k0Label";
+            this.k0Label.Size = new System.Drawing.Size(13, 13);
+            this.k0Label.TabIndex = 72;
+            this.k0Label.Text = "=";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(622, 81);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(27, 13);
+            this.label26.TabIndex = 70;
+            this.label26.Text = "кПа";
+            // 
+            // pgTextt
+            // 
+            this.pgTextt.Location = new System.Drawing.Point(516, 78);
+            this.pgTextt.Name = "pgTextt";
+            this.pgTextt.Size = new System.Drawing.Size(100, 20);
+            this.pgTextt.TabIndex = 69;
+            this.pgTextt.Text = "0,150";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(464, 81);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(28, 13);
+            this.label27.TabIndex = 68;
+            this.label27.Text = "Pг =";
             // 
             // button2
             // 
@@ -981,6 +1044,591 @@ namespace WindowsFormsApp5
             this.label1.TabIndex = 18;
             this.label1.Text = "Vг =";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.label65);
+            this.tabPage4.Controls.Add(this.label63);
+            this.tabPage4.Controls.Add(this.m_vent);
+            this.tabPage4.Controls.Add(this.label64);
+            this.tabPage4.Controls.Add(this.label28);
+            this.tabPage4.Controls.Add(this.d_vent);
+            this.tabPage4.Controls.Add(this.pictureBox24);
+            this.tabPage4.Controls.Add(this.label30);
+            this.tabPage4.Controls.Add(this.zz_vent);
+            this.tabPage4.Controls.Add(this.label31);
+            this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Controls.Add(this.d2_vent);
+            this.tabPage4.Controls.Add(this.w2_vent);
+            this.tabPage4.Controls.Add(this.eg_vent);
+            this.tabPage4.Controls.Add(this.pc_vent);
+            this.tabPage4.Controls.Add(this.dpc_vent);
+            this.tabPage4.Controls.Add(this.h_vent);
+            this.tabPage4.Controls.Add(this.v2_vent);
+            this.tabPage4.Controls.Add(this.po2_vent);
+            this.tabPage4.Controls.Add(this.t2_vent);
+            this.tabPage4.Controls.Add(this.mv_vent);
+            this.tabPage4.Controls.Add(this.v1_vent);
+            this.tabPage4.Controls.Add(this.po1_vent);
+            this.tabPage4.Controls.Add(this.dp_vent);
+            this.tabPage4.Controls.Add(this.kg_vent);
+            this.tabPage4.Controls.Add(this.ng_vent);
+            this.tabPage4.Controls.Add(this.n_vent);
+            this.tabPage4.Controls.Add(this.label48);
+            this.tabPage4.Controls.Add(this.label49);
+            this.tabPage4.Controls.Add(this.label50);
+            this.tabPage4.Controls.Add(this.label51);
+            this.tabPage4.Controls.Add(this.label52);
+            this.tabPage4.Controls.Add(this.label54);
+            this.tabPage4.Controls.Add(this.tn_vent);
+            this.tabPage4.Controls.Add(this.p2_vent);
+            this.tabPage4.Controls.Add(this.label55);
+            this.tabPage4.Controls.Add(this.label56);
+            this.tabPage4.Controls.Add(this.z_vent);
+            this.tabPage4.Controls.Add(this.label57);
+            this.tabPage4.Controls.Add(this.p0_vent);
+            this.tabPage4.Controls.Add(this.p1_vent);
+            this.tabPage4.Controls.Add(this.label58);
+            this.tabPage4.Controls.Add(this.label59);
+            this.tabPage4.Controls.Add(this.tg_vent);
+            this.tabPage4.Controls.Add(this.label60);
+            this.tabPage4.Controls.Add(this.e_vent);
+            this.tabPage4.Controls.Add(this.v0_vent);
+            this.tabPage4.Controls.Add(this.label61);
+            this.tabPage4.Controls.Add(this.label62);
+            this.tabPage4.Controls.Add(this.pictureBox25);
+            this.tabPage4.Controls.Add(this.pictureBox26);
+            this.tabPage4.Controls.Add(this.pictureBox27);
+            this.tabPage4.Controls.Add(this.pictureBox28);
+            this.tabPage4.Controls.Add(this.pictureBox29);
+            this.tabPage4.Controls.Add(this.pictureBox30);
+            this.tabPage4.Controls.Add(this.pictureBox31);
+            this.tabPage4.Controls.Add(this.pictureBox32);
+            this.tabPage4.Controls.Add(this.pictureBox33);
+            this.tabPage4.Controls.Add(this.pictureBox34);
+            this.tabPage4.Controls.Add(this.pictureBox35);
+            this.tabPage4.Controls.Add(this.pictureBox36);
+            this.tabPage4.Controls.Add(this.pictureBox37);
+            this.tabPage4.Controls.Add(this.pictureBox38);
+            this.tabPage4.Controls.Add(this.pictureBox39);
+            this.tabPage4.Controls.Add(this.pictureBox40);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1323, 824);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Расчёт скруббера Вентури";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(49, 551);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(156, 13);
+            this.label28.TabIndex = 135;
+            this.label28.Text = "Площадь сечения горловины";
+            // 
+            // d_vent
+            // 
+            this.d_vent.AutoSize = true;
+            this.d_vent.Location = new System.Drawing.Point(784, 484);
+            this.d_vent.Name = "d_vent";
+            this.d_vent.Size = new System.Drawing.Size(13, 13);
+            this.d_vent.TabIndex = 134;
+            this.d_vent.Text = "=";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(644, 89);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(39, 13);
+            this.label30.TabIndex = 132;
+            this.label30.Text = "мг/м3";
+            // 
+            // zz_vent
+            // 
+            this.zz_vent.Location = new System.Drawing.Point(538, 86);
+            this.zz_vent.Name = "zz_vent";
+            this.zz_vent.Size = new System.Drawing.Size(100, 20);
+            this.zz_vent.TabIndex = 131;
+            this.zz_vent.Text = "20";
+            this.zz_vent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pgtextbox_KeyPress);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(486, 89);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(26, 13);
+            this.label31.TabIndex = 130;
+            this.label31.Text = "z\" =";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(43, 492);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(152, 31);
+            this.button3.TabIndex = 129;
+            this.button3.Text = "Вычислить";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // d2_vent
+            // 
+            this.d2_vent.AutoSize = true;
+            this.d2_vent.Location = new System.Drawing.Point(1227, 484);
+            this.d2_vent.Name = "d2_vent";
+            this.d2_vent.Size = new System.Drawing.Size(13, 13);
+            this.d2_vent.TabIndex = 128;
+            this.d2_vent.Text = "=";
+            // 
+            // w2_vent
+            // 
+            this.w2_vent.AutoSize = true;
+            this.w2_vent.Location = new System.Drawing.Point(1227, 421);
+            this.w2_vent.Name = "w2_vent";
+            this.w2_vent.Size = new System.Drawing.Size(13, 13);
+            this.w2_vent.TabIndex = 127;
+            this.w2_vent.Text = "=";
+            // 
+            // eg_vent
+            // 
+            this.eg_vent.AutoSize = true;
+            this.eg_vent.Location = new System.Drawing.Point(1227, 356);
+            this.eg_vent.Name = "eg_vent";
+            this.eg_vent.Size = new System.Drawing.Size(13, 13);
+            this.eg_vent.TabIndex = 126;
+            this.eg_vent.Text = "=";
+            // 
+            // pc_vent
+            // 
+            this.pc_vent.AutoSize = true;
+            this.pc_vent.Location = new System.Drawing.Point(1227, 289);
+            this.pc_vent.Name = "pc_vent";
+            this.pc_vent.Size = new System.Drawing.Size(13, 13);
+            this.pc_vent.TabIndex = 125;
+            this.pc_vent.Text = "=";
+            // 
+            // dpc_vent
+            // 
+            this.dpc_vent.AutoSize = true;
+            this.dpc_vent.Location = new System.Drawing.Point(1227, 220);
+            this.dpc_vent.Name = "dpc_vent";
+            this.dpc_vent.Size = new System.Drawing.Size(13, 13);
+            this.dpc_vent.TabIndex = 124;
+            this.dpc_vent.Text = "=";
+            // 
+            // h_vent
+            // 
+            this.h_vent.AutoSize = true;
+            this.h_vent.Location = new System.Drawing.Point(1227, 154);
+            this.h_vent.Name = "h_vent";
+            this.h_vent.Size = new System.Drawing.Size(13, 13);
+            this.h_vent.TabIndex = 123;
+            this.h_vent.Text = "=";
+            // 
+            // v2_vent
+            // 
+            this.v2_vent.AutoSize = true;
+            this.v2_vent.Location = new System.Drawing.Point(784, 421);
+            this.v2_vent.Name = "v2_vent";
+            this.v2_vent.Size = new System.Drawing.Size(13, 13);
+            this.v2_vent.TabIndex = 122;
+            this.v2_vent.Text = "=";
+            // 
+            // po2_vent
+            // 
+            this.po2_vent.AutoSize = true;
+            this.po2_vent.Location = new System.Drawing.Point(784, 356);
+            this.po2_vent.Name = "po2_vent";
+            this.po2_vent.Size = new System.Drawing.Size(13, 13);
+            this.po2_vent.TabIndex = 121;
+            this.po2_vent.Text = "=";
+            // 
+            // t2_vent
+            // 
+            this.t2_vent.AutoSize = true;
+            this.t2_vent.Location = new System.Drawing.Point(784, 289);
+            this.t2_vent.Name = "t2_vent";
+            this.t2_vent.Size = new System.Drawing.Size(13, 13);
+            this.t2_vent.TabIndex = 120;
+            this.t2_vent.Text = "=";
+            // 
+            // mv_vent
+            // 
+            this.mv_vent.AutoSize = true;
+            this.mv_vent.Location = new System.Drawing.Point(784, 220);
+            this.mv_vent.Name = "mv_vent";
+            this.mv_vent.Size = new System.Drawing.Size(13, 13);
+            this.mv_vent.TabIndex = 119;
+            this.mv_vent.Text = "=";
+            // 
+            // v1_vent
+            // 
+            this.v1_vent.AutoSize = true;
+            this.v1_vent.Location = new System.Drawing.Point(784, 154);
+            this.v1_vent.Name = "v1_vent";
+            this.v1_vent.Size = new System.Drawing.Size(13, 13);
+            this.v1_vent.TabIndex = 118;
+            this.v1_vent.Text = "=";
+            // 
+            // po1_vent
+            // 
+            this.po1_vent.AutoSize = true;
+            this.po1_vent.Location = new System.Drawing.Point(366, 431);
+            this.po1_vent.Name = "po1_vent";
+            this.po1_vent.Size = new System.Drawing.Size(13, 13);
+            this.po1_vent.TabIndex = 117;
+            this.po1_vent.Text = "=";
+            // 
+            // dp_vent
+            // 
+            this.dp_vent.AutoSize = true;
+            this.dp_vent.Location = new System.Drawing.Point(366, 356);
+            this.dp_vent.Name = "dp_vent";
+            this.dp_vent.Size = new System.Drawing.Size(13, 13);
+            this.dp_vent.TabIndex = 116;
+            this.dp_vent.Text = "=";
+            // 
+            // kg_vent
+            // 
+            this.kg_vent.AutoSize = true;
+            this.kg_vent.Location = new System.Drawing.Point(366, 289);
+            this.kg_vent.Name = "kg_vent";
+            this.kg_vent.Size = new System.Drawing.Size(13, 13);
+            this.kg_vent.TabIndex = 115;
+            this.kg_vent.Text = "=";
+            // 
+            // ng_vent
+            // 
+            this.ng_vent.AutoSize = true;
+            this.ng_vent.Location = new System.Drawing.Point(366, 220);
+            this.ng_vent.Name = "ng_vent";
+            this.ng_vent.Size = new System.Drawing.Size(13, 13);
+            this.ng_vent.TabIndex = 114;
+            this.ng_vent.Text = "=";
+            // 
+            // n_vent
+            // 
+            this.n_vent.AutoSize = true;
+            this.n_vent.Location = new System.Drawing.Point(366, 154);
+            this.n_vent.Name = "n_vent";
+            this.n_vent.Size = new System.Drawing.Size(13, 13);
+            this.n_vent.TabIndex = 113;
+            this.n_vent.Text = "=";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(644, 63);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(18, 13);
+            this.label48.TabIndex = 112;
+            this.label48.Text = "°С";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(418, 89);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(31, 13);
+            this.label49.TabIndex = 111;
+            this.label49.Text = "г/м3";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(418, 63);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(37, 13);
+            this.label50.TabIndex = 110;
+            this.label50.Text = "кг/м3";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(418, 37);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(27, 13);
+            this.label51.TabIndex = 109;
+            this.label51.Text = "кПа";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(201, 89);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(18, 13);
+            this.label52.TabIndex = 108;
+            this.label52.Text = "°С";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(201, 37);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(31, 13);
+            this.label54.TabIndex = 106;
+            this.label54.Text = "м3/ч";
+            // 
+            // tn_vent
+            // 
+            this.tn_vent.Location = new System.Drawing.Point(538, 60);
+            this.tn_vent.Name = "tn_vent";
+            this.tn_vent.Size = new System.Drawing.Size(100, 20);
+            this.tn_vent.TabIndex = 105;
+            this.tn_vent.Text = "20";
+            this.tn_vent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pgtextbox_KeyPress);
+            // 
+            // p2_vent
+            // 
+            this.p2_vent.Location = new System.Drawing.Point(538, 34);
+            this.p2_vent.Name = "p2_vent";
+            this.p2_vent.Size = new System.Drawing.Size(100, 20);
+            this.p2_vent.TabIndex = 104;
+            this.p2_vent.Text = "300";
+            this.p2_vent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pgtextbox_KeyPress);
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(486, 63);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(29, 13);
+            this.label55.TabIndex = 103;
+            this.label55.Text = "Тн =";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(486, 37);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(29, 13);
+            this.label56.TabIndex = 102;
+            this.label56.Text = "Р2 =";
+            // 
+            // z_vent
+            // 
+            this.z_vent.Location = new System.Drawing.Point(312, 86);
+            this.z_vent.Name = "z_vent";
+            this.z_vent.Size = new System.Drawing.Size(100, 20);
+            this.z_vent.TabIndex = 101;
+            this.z_vent.Text = "1";
+            this.z_vent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pgtextbox_KeyPress);
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(260, 89);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(23, 13);
+            this.label57.TabIndex = 100;
+            this.label57.Text = "z\' =";
+            // 
+            // p0_vent
+            // 
+            this.p0_vent.Location = new System.Drawing.Point(312, 60);
+            this.p0_vent.Name = "p0_vent";
+            this.p0_vent.Size = new System.Drawing.Size(100, 20);
+            this.p0_vent.TabIndex = 99;
+            this.p0_vent.Text = "1,26";
+            this.p0_vent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pgtextbox_KeyPress);
+            // 
+            // p1_vent
+            // 
+            this.p1_vent.Location = new System.Drawing.Point(312, 34);
+            this.p1_vent.Name = "p1_vent";
+            this.p1_vent.Size = new System.Drawing.Size(100, 20);
+            this.p1_vent.TabIndex = 98;
+            this.p1_vent.Text = "1,2";
+            this.p1_vent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pgtextbox_KeyPress);
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(260, 63);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(28, 13);
+            this.label58.TabIndex = 97;
+            this.label58.Text = "ρ0 =";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(260, 37);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(29, 13);
+            this.label59.TabIndex = 96;
+            this.label59.Text = "Р1 =";
+            // 
+            // tg_vent
+            // 
+            this.tg_vent.Location = new System.Drawing.Point(101, 86);
+            this.tg_vent.Name = "tg_vent";
+            this.tg_vent.Size = new System.Drawing.Size(100, 20);
+            this.tg_vent.TabIndex = 95;
+            this.tg_vent.Text = "60";
+            this.tg_vent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pgtextbox_KeyPress);
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(49, 89);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(28, 13);
+            this.label60.TabIndex = 94;
+            this.label60.Text = "Тг =";
+            // 
+            // e_vent
+            // 
+            this.e_vent.Location = new System.Drawing.Point(101, 60);
+            this.e_vent.Name = "e_vent";
+            this.e_vent.Size = new System.Drawing.Size(100, 20);
+            this.e_vent.TabIndex = 93;
+            this.e_vent.Text = "32";
+            this.e_vent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pgtextbox_KeyPress);
+            // 
+            // v0_vent
+            // 
+            this.v0_vent.Location = new System.Drawing.Point(101, 34);
+            this.v0_vent.Name = "v0_vent";
+            this.v0_vent.Size = new System.Drawing.Size(100, 20);
+            this.v0_vent.TabIndex = 92;
+            this.v0_vent.Text = "2000";
+            this.v0_vent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pgtextbox_KeyPress);
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(49, 63);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(21, 13);
+            this.label61.TabIndex = 91;
+            this.label61.Text = "ξ =";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(49, 37);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(29, 13);
+            this.label62.TabIndex = 90;
+            this.label62.Text = "V0 =";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(850, 37);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(40, 13);
+            this.label63.TabIndex = 138;
+            this.label63.Text = "дм/м3";
+            // 
+            // m_vent
+            // 
+            this.m_vent.Location = new System.Drawing.Point(744, 34);
+            this.m_vent.Name = "m_vent";
+            this.m_vent.Size = new System.Drawing.Size(100, 20);
+            this.m_vent.TabIndex = 137;
+            this.m_vent.Text = "1,2";
+            this.m_vent.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pgtextbox_KeyPress);
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(692, 37);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(24, 13);
+            this.label64.TabIndex = 136;
+            this.label64.Text = "m =";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(644, 37);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(30, 13);
+            this.label65.TabIndex = 139;
+            this.label65.Text = "кДж";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp5.Properties.Resources._388;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(152, 31);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Гидравлическое сопротивление скруббера Вентури (ΔP0) находят как \r\nсумму гидравли" +
+        "ческих сопротивлений трубы Вентури (ΔPг) и циклона-каплеуловителя (ΔPк):\r\n");
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::WindowsFormsApp5.Properties.Resources._393;
+            this.pictureBox6.Location = new System.Drawing.Point(28, 171);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(148, 55);
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox6, "где ε, — коэффициент сопротивления циклона принимается: = 30—33 — для прямоточных" +
+        " циклонов,\r\n = 70 — для циклонов ЦН24; wu — скорость газов в циклоне, должна нах" +
+        "одиться в пределах 2,5—4,5 м/с.");
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp5.Properties.Resources._389;
+            this.pictureBox2.Location = new System.Drawing.Point(24, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(152, 31);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox2, "Потеря давления в трубе Вентури (АрТ) ");
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp5.Properties.Resources._390;
+            this.pictureBox3.Location = new System.Drawing.Point(26, 158);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(115, 51);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox3, resources.GetString("pictureBox3.ToolTip"));
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WindowsFormsApp5.Properties.Resources._391;
+            this.pictureBox4.Location = new System.Drawing.Point(237, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(138, 51);
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox4, resources.GetString("pictureBox4.ToolTip"));
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WindowsFormsApp5.Properties.Resources._392;
+            this.pictureBox5.Location = new System.Drawing.Point(237, 222);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(138, 31);
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox5, "Для определения коэффициента сопротивления, обусловленного вводом жидкости εж для" +
+        " нормализованных \r\nтруб с центральным вводом жидкости в конфузор, можно воспольз" +
+        "оваться эмпирическим выражением");
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::WindowsFormsApp5.Properties.Resources.K0;
+            this.pictureBox17.Location = new System.Drawing.Point(411, 454);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(345, 61);
+            this.pictureBox17.TabIndex = 71;
+            this.pictureBox17.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox17, "Объемный коэффициент теплоотдачи в скруббере, рассчитанный по формуле (7.31) (Вт/" +
+        "(м3- К)):");
+            // 
             // pictureBox23
             // 
             this.pictureBox23.Image = global::WindowsFormsApp5.Properties.Resources.n;
@@ -1144,60 +1792,196 @@ namespace WindowsFormsApp5
             this.pictureBox7.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox7, "1.\tОбъем сухих газов в скруббере при нормальных условиях (м3/с):");
             // 
-            // pgTextt
+            // pictureBox24
             // 
-            this.pgTextt.Location = new System.Drawing.Point(516, 78);
-            this.pgTextt.Name = "pgTextt";
-            this.pgTextt.Size = new System.Drawing.Size(100, 20);
-            this.pgTextt.TabIndex = 69;
-            this.pgTextt.Text = "0,150";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(464, 81);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(28, 13);
-            this.label27.TabIndex = 68;
-            this.label27.Text = "Pг =";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(622, 81);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(27, 13);
-            this.label26.TabIndex = 70;
-            this.label26.Text = "кПа";
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = global::WindowsFormsApp5.Properties.Resources.K0;
-            this.pictureBox17.Location = new System.Drawing.Point(411, 454);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(345, 61);
-            this.pictureBox17.TabIndex = 71;
-            this.pictureBox17.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox17, "Объемный коэффициент теплоотдачи в скруббере, рассчитанный по формуле (7.31) (Вт/" +
+            this.pictureBox24.Image = global::WindowsFormsApp5.Properties.Resources._11;
+            this.pictureBox24.Location = new System.Drawing.Point(464, 462);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox24.TabIndex = 133;
+            this.pictureBox24.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox24, "Объемный коэффициент теплоотдачи в скруббере, рассчитанный по формуле (7.31) (Вт/" +
         "(м3- К)):");
             // 
-            // k0Label
+            // pictureBox25
             // 
-            this.k0Label.AutoSize = true;
-            this.k0Label.Location = new System.Drawing.Point(762, 476);
-            this.k0Label.Name = "k0Label";
-            this.k0Label.Size = new System.Drawing.Size(13, 13);
-            this.k0Label.TabIndex = 72;
-            this.k0Label.Text = "=";
+            this.pictureBox25.Image = global::WindowsFormsApp5.Properties.Resources._17;
+            this.pictureBox25.Location = new System.Drawing.Point(907, 462);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox25.TabIndex = 89;
+            this.pictureBox25.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox25, "Степень очистки газа в скруббере:");
             // 
-            // tmLabel
+            // pictureBox26
             // 
-            this.tmLabel.AutoSize = true;
-            this.tmLabel.Location = new System.Drawing.Point(27, 502);
-            this.tmLabel.Name = "tmLabel";
-            this.tmLabel.Size = new System.Drawing.Size(211, 13);
-            this.tmLabel.TabIndex = 73;
-            this.tmLabel.Text = "Температура мокрого термометра °С = ";
+            this.pictureBox26.Image = global::WindowsFormsApp5.Properties.Resources._16;
+            this.pictureBox26.Location = new System.Drawing.Point(907, 395);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox26.TabIndex = 88;
+            this.pictureBox26.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox26, "Число единиц переноса:");
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.Image = global::WindowsFormsApp5.Properties.Resources._15;
+            this.pictureBox27.Location = new System.Drawing.Point(907, 328);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox27.TabIndex = 87;
+            this.pictureBox27.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox27, ". Главный энергетический параметр скруббера (кДж/1000 м3 газа):");
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.Image = global::WindowsFormsApp5.Properties.Resources._14;
+            this.pictureBox28.Location = new System.Drawing.Point(907, 261);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox28.TabIndex = 86;
+            this.pictureBox28.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox28, "Соотношение высоты и диаметра скруббера:");
+            // 
+            // pictureBox29
+            // 
+            this.pictureBox29.Image = global::WindowsFormsApp5.Properties.Resources._13;
+            this.pictureBox29.Location = new System.Drawing.Point(907, 194);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox29.TabIndex = 85;
+            this.pictureBox29.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox29, "Необходимая активная высота скруббера (м):");
+            // 
+            // pictureBox30
+            // 
+            this.pictureBox30.Image = global::WindowsFormsApp5.Properties.Resources._12;
+            this.pictureBox30.Location = new System.Drawing.Point(907, 127);
+            this.pictureBox30.Name = "pictureBox30";
+            this.pictureBox30.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox30.TabIndex = 84;
+            this.pictureBox30.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox30, "Необходимый диаметр скруббера (м):");
+            // 
+            // pictureBox31
+            // 
+            this.pictureBox31.Image = global::WindowsFormsApp5.Properties.Resources._10;
+            this.pictureBox31.Location = new System.Drawing.Point(464, 399);
+            this.pictureBox31.Name = "pictureBox31";
+            this.pictureBox31.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox31.TabIndex = 83;
+            this.pictureBox31.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox31, "Необходимый рабочий объем скруббера (м3):");
+            // 
+            // pictureBox32
+            // 
+            this.pictureBox32.Image = global::WindowsFormsApp5.Properties.Resources._9;
+            this.pictureBox32.Location = new System.Drawing.Point(464, 332);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox32.TabIndex = 82;
+            this.pictureBox32.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox32, "Плотность газа на выходе из скруббера (кг/м3):");
+            // 
+            // pictureBox33
+            // 
+            this.pictureBox33.Image = global::WindowsFormsApp5.Properties.Resources._8;
+            this.pictureBox33.Location = new System.Drawing.Point(464, 265);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox33.TabIndex = 81;
+            this.pictureBox33.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox33, "Расход газа на выходе из скруббера при рабочих условиях:");
+            // 
+            // pictureBox34
+            // 
+            this.pictureBox34.Image = global::WindowsFormsApp5.Properties.Resources._7;
+            this.pictureBox34.Location = new System.Drawing.Point(464, 198);
+            this.pictureBox34.Name = "pictureBox34";
+            this.pictureBox34.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox34.TabIndex = 80;
+            this.pictureBox34.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox34, "Влагосодержание газа на выходе из скруббера (кг/м3):");
+            // 
+            // pictureBox35
+            // 
+            this.pictureBox35.Image = global::WindowsFormsApp5.Properties.Resources._6;
+            this.pictureBox35.Location = new System.Drawing.Point(464, 131);
+            this.pictureBox35.Name = "pictureBox35";
+            this.pictureBox35.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox35.TabIndex = 79;
+            this.pictureBox35.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox35, resources.GetString("pictureBox35.ToolTip"));
+            // 
+            // pictureBox36
+            // 
+            this.pictureBox36.Image = global::WindowsFormsApp5.Properties.Resources._5;
+            this.pictureBox36.Location = new System.Drawing.Point(43, 399);
+            this.pictureBox36.Name = "pictureBox36";
+            this.pictureBox36.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox36.TabIndex = 78;
+            this.pictureBox36.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox36, resources.GetString("pictureBox36.ToolTip"));
+            // 
+            // pictureBox37
+            // 
+            this.pictureBox37.Image = global::WindowsFormsApp5.Properties.Resources._4;
+            this.pictureBox37.Location = new System.Drawing.Point(43, 332);
+            this.pictureBox37.Name = "pictureBox37";
+            this.pictureBox37.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox37.TabIndex = 77;
+            this.pictureBox37.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox37, "Количество тепла, отнимаемое от газов в скруббере (кВт) где Сг = 1,3 — теплоемкос" +
+        "ть сухого газа, кДж/м3");
+            // 
+            // pictureBox38
+            // 
+            this.pictureBox38.Image = global::WindowsFormsApp5.Properties.Resources._3;
+            this.pictureBox38.Location = new System.Drawing.Point(43, 265);
+            this.pictureBox38.Name = "pictureBox38";
+            this.pictureBox38.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox38.TabIndex = 76;
+            this.pictureBox38.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox38, "Начальное и конечное значения энтальпии водяных паров, содержащихся в газах (кДж/" +
+        "кг):");
+            // 
+            // pictureBox39
+            // 
+            this.pictureBox39.Image = global::WindowsFormsApp5.Properties.Resources._2;
+            this.pictureBox39.Location = new System.Drawing.Point(43, 198);
+            this.pictureBox39.Name = "pictureBox39";
+            this.pictureBox39.Size = new System.Drawing.Size(314, 61);
+            this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox39.TabIndex = 75;
+            this.pictureBox39.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox39, "Начальное и конечное значения энтальпии водяных паров, содержащихся в газах (кДж/" +
+        "кг):");
+            // 
+            // pictureBox40
+            // 
+            this.pictureBox40.Image = global::WindowsFormsApp5.Properties.Resources._1;
+            this.pictureBox40.Location = new System.Drawing.Point(43, 131);
+            this.pictureBox40.Name = "pictureBox40";
+            this.pictureBox40.Size = new System.Drawing.Size(314, 56);
+            this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox40.TabIndex = 74;
+            this.pictureBox40.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox40, "1.\tОбъем сухих газов в скруббере при нормальных условиях (м3/с):");
             // 
             // Form1
             // 
@@ -1210,16 +1994,19 @@ namespace WindowsFormsApp5
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
@@ -1236,7 +2023,23 @@ namespace WindowsFormsApp5
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1344,6 +2147,72 @@ namespace WindowsFormsApp5
         private System.Windows.Forms.Label k0Label;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.Label tmLabel;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.TextBox m_vent;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label d_vent;
+        private System.Windows.Forms.PictureBox pictureBox24;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox zz_vent;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label d2_vent;
+        private System.Windows.Forms.Label w2_vent;
+        private System.Windows.Forms.Label eg_vent;
+        private System.Windows.Forms.Label pc_vent;
+        private System.Windows.Forms.Label dpc_vent;
+        private System.Windows.Forms.Label h_vent;
+        private System.Windows.Forms.Label v2_vent;
+        private System.Windows.Forms.Label po2_vent;
+        private System.Windows.Forms.Label t2_vent;
+        private System.Windows.Forms.Label mv_vent;
+        private System.Windows.Forms.Label v1_vent;
+        private System.Windows.Forms.Label po1_vent;
+        private System.Windows.Forms.Label dp_vent;
+        private System.Windows.Forms.Label kg_vent;
+        private System.Windows.Forms.Label ng_vent;
+        private System.Windows.Forms.Label n_vent;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox tn_vent;
+        private System.Windows.Forms.TextBox p2_vent;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.TextBox z_vent;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.TextBox p0_vent;
+        private System.Windows.Forms.TextBox p1_vent;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.TextBox tg_vent;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.TextBox e_vent;
+        private System.Windows.Forms.TextBox v0_vent;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.PictureBox pictureBox25;
+        private System.Windows.Forms.PictureBox pictureBox26;
+        private System.Windows.Forms.PictureBox pictureBox27;
+        private System.Windows.Forms.PictureBox pictureBox28;
+        private System.Windows.Forms.PictureBox pictureBox29;
+        private System.Windows.Forms.PictureBox pictureBox30;
+        private System.Windows.Forms.PictureBox pictureBox31;
+        private System.Windows.Forms.PictureBox pictureBox32;
+        private System.Windows.Forms.PictureBox pictureBox33;
+        private System.Windows.Forms.PictureBox pictureBox34;
+        private System.Windows.Forms.PictureBox pictureBox35;
+        private System.Windows.Forms.PictureBox pictureBox36;
+        private System.Windows.Forms.PictureBox pictureBox37;
+        private System.Windows.Forms.PictureBox pictureBox38;
+        private System.Windows.Forms.PictureBox pictureBox39;
+        private System.Windows.Forms.PictureBox pictureBox40;
     }
 }
 
