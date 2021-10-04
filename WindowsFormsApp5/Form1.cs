@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp5
 {
+  
     public partial class Form1 : Form
     {
         
@@ -237,27 +238,27 @@ namespace WindowsFormsApp5
                 Kch = dP + Pb*1000*0.016/Vg;
                 Nch = 6.61*0.001 * Math.Pow(Kch, 0.891);
                 n = 1-(-Math.Exp(Nch));
-                v0Label.Text = "= " + V0c.ToString();
-                tmLabel.Text = "Температура мокрого термометра °С = " + tM.ToString();
-                i1Label.Text = "= " + i1.ToString();
-                i2Label.Text = "= " + i2.ToString();
-                qLabel.Text = "= " + Q.ToString();
-                dTlabel.Text = "= " + dTavg.ToString();
-                mBlabel.Text = "= " + Mb.ToString();
-                x2Label.Text = "= " + x2.ToString();
-                vgLabel.Text = "= " + Vg.ToString();
-                p2Label.Text = "= " + p2.ToString();
-                k0Label.Text = "= " + k0.ToString();
-                vClabel.Text = "= " + vc.ToString();
-                dLabel.Text = "= " + d.ToString();
-                hLabel.Text = "= " + h.ToString();
-                HDLabel.Text = "= " + hd.ToString();
-                p2Label.Text = "= " + p2.ToString();
-                vClabel.Text = "= " + vc.ToString();
-                dLabel.Text = "= " + d.ToString();
-                kHlabel.Text = "= " + Kch.ToString();
-                NLabel.Text = "= " + Nch.ToString();
-                nuLabel.Text = "= " + n.ToString();
+                v0Label.Text = "= " + Math.Round(V0c, 2).ToString();
+                tmLabel.Text = "Температура мокрого термометра °С = " + Math.Round(tM, 2).ToString();
+                i1Label.Text = "= " + Math.Round(i1, 2).ToString();
+                i2Label.Text = "= " + Math.Round(i2, 2).ToString();
+                qLabel.Text = "= " + Math.Round(Q, 2).ToString();
+                dTlabel.Text = "= " + Math.Round(dTavg, 2).ToString();
+                mBlabel.Text = "= " + Math.Round(Mb, 2).ToString();
+                x2Label.Text = "= " + Math.Round(x2, 2).ToString();
+                vgLabel.Text = "= " + Math.Round(Vg, 2).ToString();
+                p2Label.Text = "= " + Math.Round(p2, 2).ToString();
+                k0Label.Text = "= " + Math.Round(k0, 2).ToString();
+                vClabel.Text = "= " + Math.Round(vc, 2).ToString();
+                dLabel.Text = "= " + Math.Round(d, 2).ToString();
+                hLabel.Text = "= " + Math.Round(h, 2).ToString();
+                HDLabel.Text = "= " + Math.Round(hd, 2).ToString();
+                p2Label.Text = "= " + Math.Round(p2, 2).ToString();
+                vClabel.Text = "= " + Math.Round(vc, 2).ToString();
+                dLabel.Text = "= " + Math.Round(d, 2).ToString();
+                kHlabel.Text = "= " + Math.Round(Kch, 2).ToString();
+                NLabel.Text = "= " + Math.Round(Nch, 2).ToString();
+                nuLabel.Text = "= " + Math.Round(n, 2).ToString();
             }
             catch (FormatException ex)
             {
@@ -489,55 +490,53 @@ namespace WindowsFormsApp5
             Double m = 0;
             try
             {
-                //Vgg = Convert.ToDouble(Vgtext.Text);
-                //Pbar = Convert.ToDouble(pBartext.Text);
-                //T = Convert.ToDouble(tText.Text);
-                //X = Convert.ToDouble(xText.Text) * 0.001;
-                //Pb = Convert.ToDouble(pBtext.Text);
-                //Fi = Convert.ToDouble(fiText.Text);
-                //dP = Convert.ToDouble(dPtext.Text);
-                //Pg = Convert.ToDouble(pgTextt.Text);
-                //Wg = Convert.ToDouble(wGtext.Text);
+                V0 = Convert.ToDouble(v0_vent.Text);
+                E = Convert.ToDouble(e_vent.Text);
+                Tg = Convert.ToDouble(tg_vent.Text);
+                P1 = Convert.ToDouble(p1_vent.Text);
+                p0 = Convert.ToDouble(p0_vent.Text);
+                z = Convert.ToDouble(z_vent.Text);
+                P2 = Convert.ToDouble(p2_vent.Text);
+                Tn = Convert.ToDouble(tn_vent.Text);
+                zz = Convert.ToDouble(zz_vent.Text);
+                m = Convert.ToDouble(m_vent.Text);
 
-                //V0c = (Vgg * 0.804 * 274 * (Pbar - Pg)) / (60 * (0.804 + X) * (273 + 300) * 101.3);
-                //tM = getTemp(V0c, T);
-                //i1 = 2480 + T * 1.96;
-                //i2 = 2489 + tM * 1.96;
-                //Q = V0c * (1.3 * (T - tM) + X * (i1 - i2));
-                //dTavg = ((T - tM - 5) - (tM - 20)) / (2.3 * Math.Log10((T - tM - 5) / (tM - 20)));
-                //Mb = Q / (Fi * (2778 - 84) + (1 - 0.5) * (230 - 84));
-                //x2 = X + (Fi * Mb) / V0c;
-                //Vg = V0c * (((0.804 + x2) * (273 + tM) * Pbar) / (0.804 * 273 * (Pbar + Pg)));
-                //p2 = ((1.3 + x2) * 0.804 * 273 * (Pbar + Pg)) / ((0.804 + x2) * (273 + tM) * Pbar);
-                //k0 = (116 + 525 * ((Mb) / (Vg * p2))) * (1 + 0.001 * 113);
-                //vc = Q * 1000 / (k0 * dTavg);
-                //d = Math.Sqrt(vc / (0.785 * Wg));
-                //h = vc / (0.785 * d * d);
-                //hd = h / d;
-                //Kch = dP + Pb * 1000 * 0.016 / Vg;
-                //Nch = 6.61 * 0.001 * Math.Pow(Kch, 0.891);
-                //n = 1 - (-Math.Exp(Nch));
-                //v0Label.Text = "= " + V0c.ToString();
-                //tmLabel.Text = "Температура мокрого термометра °С = " + tM.ToString();
-                //i1Label.Text = "= " + i1.ToString();
-                //i2Label.Text = "= " + i2.ToString();
-                //qLabel.Text = "= " + Q.ToString();
-                //dTlabel.Text = "= " + dTavg.ToString();
-                //mBlabel.Text = "= " + Mb.ToString();
-                //x2Label.Text = "= " + x2.ToString();
-                //vgLabel.Text = "= " + Vg.ToString();
-                //p2Label.Text = "= " + p2.ToString();
-                //k0Label.Text = "= " + k0.ToString();
-                //vClabel.Text = "= " + vc.ToString();
-                //dLabel.Text = "= " + d.ToString();
-                //hLabel.Text = "= " + h.ToString();
-                //HDLabel.Text = "= " + hd.ToString();
-                //p2Label.Text = "= " + p2.ToString();
-                //vClabel.Text = "= " + vc.ToString();
-                //dLabel.Text = "= " + d.ToString();
-                //kHlabel.Text = "= " + Kch.ToString();
-                //NLabel.Text = "= " + Nch.ToString();
-                //nuLabel.Text = "= " + n.ToString();
+                n = 1 - (z/zz);
+                Ng = Math.Log(1/(1-n));
+                kg = Math.Pow((Ng / 6.9 * 1000), 1.493);
+                dp = kg-300000*0.0012;
+                p1 = p0*((273*(101.3-1.2))/((273+Tg)*101.3));
+                V1 = V0*p0/(p1*3600);
+                Mv = V1*m;
+                T2 = (0.133-0.041*m)*Tg + 35;
+                p2 = 163 + (0.063*(101.3-1.2-12)*0.804)/((273 + T2) * 101.3 * (0.804 + 0.063));
+                V2 = V0*p0/(p2*3600);
+                D = 1.13*Math.Sqrt(0.73/2.5);
+                H = 2.5*D;
+                dpc = E*2.5*2.5*0.96/2;
+                pc = dp - dpc;
+                Eg = 0.63*0.145*Math.Pow(m, -0.3);
+                w2 = Math.Sqrt((2*12440)/(0.145*p2 + Eg*1060*m));
+                d2 = 1.13 * Math.Sqrt(V2 / w2);
+
+                n_vent.Text = "= " + Math.Round(n, 2).ToString();
+                ng_vent.Text = "= " + Math.Round(Ng, 2).ToString();
+                kg_vent.Text = "= " + Math.Round(kg, 2).ToString();
+                dp_vent.Text = "= " + Math.Round(dp, 2).ToString();
+                po1_vent.Text = "= " + Math.Round(p1, 2).ToString();
+                v1_vent.Text = "= " + Math.Round(V1, 2).ToString();
+                mv_vent.Text = "= " + Math.Round(Mv, 2).ToString();
+                t2_vent.Text = "= " + Math.Round(T2, 2).ToString();
+                po2_vent.Text = "= " + Math.Round(p2, 2).ToString();
+                v2_vent.Text = "= " + Math.Round(V2, 2).ToString();
+                d_vent.Text = "= " + Math.Round(D, 2).ToString();
+                h_vent.Text = "= " + Math.Round(H, 2).ToString();
+                dpc_vent.Text = "= " + Math.Round(dpc, 2).ToString();
+                pc_vent.Text = "= " + Math.Round(pc, 2).ToString();
+                eg_vent.Text = "= " + Math.Round(Eg, 2).ToString();
+                w2_vent.Text = "= " + Math.Round(w2, 2).ToString();
+                d2_vent.Text = "= " + Math.Round(d2, 2).ToString();
+                label28.Text = typeRazm(d2).ToString();
             }
             catch (FormatException ex)
             {
@@ -547,6 +546,83 @@ namespace WindowsFormsApp5
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        class GVPB
+        {
+            public GVPB(String S, String P, String D, String R, String razm, String m)
+            {
+                this.S = S;
+                this.P = P;
+                this.D = D;
+                this.R = R;
+                this.razm = razm;
+                this.m = m;
+            }
+            String S;
+            String P;
+            String D;
+            String R;
+            String razm;
+            String m;
+            public override string ToString()
+            {
+                return $"Площадь сечения горловины, {S} м2 \n " +
+                    $"Производительность, {P} м/ч \n " +
+                    $"Диаметр горловины, {D} мм \n " +
+                    $"Расход орошающей жидкости {R} \n " +
+                    $"Габаритные размеры ШХГХВ, {razm} мм \n " +
+                    $"Масса, {m} кг";
+            }
+        }
+
+        private GVPB typeRazm(Double d)
+        {
+            if (d <= 0.006)
+            {
+                return new GVPB("0,006", "1700-3500", "85", "1,2-6,8", "560Х445Х1850", "70");
+            }
+            else if (d <= 0.010)
+            {
+                return new GVPB("0,010", "3100-6500", "115", "2,9-12", "670Х540Х2500", "120");
+            }
+            else if (d <= 0.014)
+            {
+                return new GVPB("0,014", "4140-8400", "135", "3,9-17", "700Х575Х2940", "150");
+            }
+            else if (d <= 0.019)
+            {
+                return new GVPB("0,019", "5590-113450", "155", "5,2-23", "765Х645Х3140", "175");
+            }
+            else if (d <= 0.025)
+            {
+                return new GVPB("0,025", "7450-15120", "180", "6,5-30", "795Х775Х3790", "257");
+            }
+            else if (d <= 0.030)
+            {
+                return new GVPB("0,030", "7450-15120", "200", "10-38", "1355Х790Х4025", "310");
+            }
+            else if (d <= 0.045)
+            {
+                return new GVPB("0,045", "9320-18900", "240", "13-56", "1420Х880Х4620", "420");
+            }
+            else if (d <= 0.060)
+            {
+                return new GVPB("0,070", "13800-28000", "280", "17-75", "1630Х1075Х5425", "560");
+            }
+            else if (d <= 0.080)
+            {
+                return new GVPB("0,080", "18630-37800", "320", "23-95", "1545Х1480Х5940", "675");
+            }
+            else if (d <= 0.100)
+            {
+                return new GVPB("0,100", "23460-47600", "370", "29-132", "1860Х1835Х7550", "975");
+            }
+            else if (d <= 0.140)
+            {
+                return new GVPB("0,140", "41400-84000", "420", "45-168", "2060Х2015Х9850", "1200");
+            }
+            else return new GVPB("", "", "", "", "", "");
         }
     }
 }
