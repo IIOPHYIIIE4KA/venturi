@@ -221,7 +221,7 @@ namespace WindowsFormsApp5
                 Wg = Convert.ToDouble(wGtext.Text);
 
                 V0c = (Vgg * 0.804*274*(Pbar-Pg))/(60*(0.804+X)*(273+300)*101.3);
-                tM = getTemp(V0c, T);
+                tM = getTemp(X * 1000, T);
                 i1 = 2480+ T*1.96;
                 i2 = 2489 + tM * 1.96;
                 Q = V0c*(1.3*(T-tM)+X*(i1-i2));
@@ -273,137 +273,141 @@ namespace WindowsFormsApp5
         private double getTemp(double v, double t)
         {
             double tt = 0;
-            if (v <= 25)
+            if (v >= 25)
             {
-                if (t <= 100)
+                if (t >= 100)
                 {
                     tt = 38.5;
                 }
-                else if (t <= 200)
+                if (t >= 200)
                 {
                     tt = 49.5;
                 }
-                else if (t <= 300)
+                if (t >= 300)
                 {
                     tt = 57;
                 }
-                else if (t <= 400)
+                if (t >= 400)
                 {
                     tt = 62;
                 }
-                else if (t <= 500)
+                if (t >= 500)
                 {
                     tt = 65;
                 }
-                else if (t <= 750)
+                if (t >= 750)
                 {
                     tt = 72.5;
                 }
-                else if (t <= 1000)
+                if (t >= 1000)
                 {
                     tt = 77.5;
                 }
-            } else if (v <= 50)
+            } 
+            if (v >= 50)
             {
-                if (t <= 100)
+                if (t >= 100)
                 {
                     tt = 44;
                 }
-                else if (t <= 200)
+                if (t >= 200)
                 {
                     tt = 53;
                 }
-                else if (t <= 300)
+                if (t >= 300)
                 {
                     tt = 59.5;
                 }
-                else if (t <= 400)
+                if (t >= 400)
                 {
                     tt = 64;
                 }
-                else if (t <= 500)
+                if (t >= 500)
                 {
                     tt = 67.5;
                 }
-                else if (t <= 750)
+                if (t >= 750)
                 {
                     tt = 74;
                 }
-                else if (t <= 1000)
+                if (t >= 1000)
                 {
                     tt = 78.5;
                 }
-            } else if (v<=100)
+            } 
+            if (v>=100)
             {
-                if (t <= 100)
+                if (t >= 100)
                 {
                     tt = 52.5;
                 }
-                else if (t <= 200)
+                if (t >= 200)
                 {
                     tt = 59;
                 }
-                else if (t <= 300)
+                if (t >= 300)
                 {
                     tt = 63.5;
                 }
-                else if (t <= 400)
+                if (t >= 400)
                 {
                     tt = 68;
                 }
-                else if (t <= 500)
+                if (t >= 500)
                 {
                     tt = 70.5;
                 }
-                else if (t <= 750)
+                if (t >= 750)
                 {
                     tt = 76.5;
                 }
-                else if (t <= 1000)
+                if (t >= 1000)
                 {
                     tt = 80.5;
                 }
-            } else if (v<=200)
+            } 
+            if (v>=200)
             {
-                if (t <= 100)
+                if (t >= 100)
                 {
                     tt = 61;
                 }
-                else if (t <= 200)
+                if (t >= 200)
                 {
                     tt = 66.5;
                 }
-                else if (t <= 300)
+                if (t >= 300)
                 {
                     tt = 70;
                 }
-                else if (t <= 400)
+                if (t >= 400)
                 {
                     tt = 72.5;
                 }
-                else if (t <= 500)
+                if (t >= 500)
                 {
                     tt = 75.5;
                 }
-                else if (t <= 750)
+                if (t >= 750)
                 {
                     tt = 79.5;
                 }
-            } else if (v<=300)
+            }
+            if (v>=300)
             {
-                if (t <= 100)
+                if (t >= 100)
                 {
                     tt = 68;
                 }
-                else if (t <= 200)
+                if (t >= 200)
                 {
                     tt = 71.5;
                 }
-                else if (t <= 300)
+                if (t >= 300)
                 {
                     tt = 74;
                 }
-                else if (t <= 400)
+                if (t >= 400)
                 {
                     tt = 78.5;
                 }
@@ -578,51 +582,51 @@ namespace WindowsFormsApp5
 
         private GVPB typeRazm(Double d)
         {
-            if (d <= 0.006)
+            if (d >= 0.006)
             {
                 return new GVPB("0,006", "1700-3500", "85", "1,2-6,8", "560Х445Х1850", "70");
             }
-            else if (d <= 0.010)
+            if (d >= 0.010)
             {
                 return new GVPB("0,010", "3100-6500", "115", "2,9-12", "670Х540Х2500", "120");
             }
-            else if (d <= 0.014)
+            if (d >= 0.014)
             {
                 return new GVPB("0,014", "4140-8400", "135", "3,9-17", "700Х575Х2940", "150");
             }
-            else if (d <= 0.019)
+            if (d >= 0.019)
             {
                 return new GVPB("0,019", "5590-113450", "155", "5,2-23", "765Х645Х3140", "175");
             }
-            else if (d <= 0.025)
+            if (d >= 0.025)
             {
                 return new GVPB("0,025", "7450-15120", "180", "6,5-30", "795Х775Х3790", "257");
             }
-            else if (d <= 0.030)
+            if (d >= 0.030)
             {
                 return new GVPB("0,030", "7450-15120", "200", "10-38", "1355Х790Х4025", "310");
             }
-            else if (d <= 0.045)
+            if (d >= 0.045)
             {
                 return new GVPB("0,045", "9320-18900", "240", "13-56", "1420Х880Х4620", "420");
             }
-            else if (d <= 0.060)
+            if (d >= 0.060)
             {
                 return new GVPB("0,070", "13800-28000", "280", "17-75", "1630Х1075Х5425", "560");
             }
-            else if (d <= 0.080)
+            if (d >= 0.080)
             {
                 return new GVPB("0,080", "18630-37800", "320", "23-95", "1545Х1480Х5940", "675");
             }
-            else if (d <= 0.100)
+            if (d >= 0.100)
             {
                 return new GVPB("0,100", "23460-47600", "370", "29-132", "1860Х1835Х7550", "975");
             }
-            else if (d <= 0.140)
+            if (d >= 0.140)
             {
                 return new GVPB("0,140", "41400-84000", "420", "45-168", "2060Х2015Х9850", "1200");
             }
-            else return new GVPB("", "", "", "", "", "");
+            return new GVPB("", "", "", "", "", "");
         }
     }
 }
