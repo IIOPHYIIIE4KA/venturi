@@ -120,15 +120,32 @@
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>29, 9</value>
   </metadata>
-  <data name="pictureBox3.ToolTip" xml:space="preserve">
-    <value>Гидравлическое сопротивление сухой трубы Вентури определяется выражением,
-где εc — коэффициент сопротивления сухой трубы Вентури (справочная величина); 
-wT — скорость газов в горловине при рабочих условиях, м/с; р, — плотность газов при рабочих условиях.</value>
-  </data>
-  <data name="pictureBox4.ToolTip" xml:space="preserve">
-    <value>Гидравлическое сопротивление, обусловленное введением жидкости Арж, определяется из выражения,
-где εж — коэффициент сопротивления, обусловленный вводом жидкости; m — удельный расход 
-орошающей жидкости, м3/м3; рж — плотность орошающей жидкости, кг/м3.
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBox18.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAKEAAABGCAYAAACkEPSMAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAQ
+        PQAAED0BQ5F11wAABNJJREFUeF7tmgtx4zAURUOhGEqhHAqhGEqhDMqgDIqgCEqgBMqgHLJzsr4zb7Sy
+        41i2X629Z0aTyB/ZkY+ffjmdjUnGEpp0LKFJxxKadCyhSccSmnQsoUnHEpp0LKFJxxKadCyhSccSmnQs
+        oUnHEpp0LGEjj4+P59Pp1EXKwhI2goSvr69DzizBEjZCBPn8/BxyZgmWsBFL2I4lbOD7+/siIZ9mOZaw
+        ASJgZoe+F1yDDWwhYRxtv729XbYp4ir1hiVsAEkeHh6G3Dp8fX1dRHt6ehq2/OXl5eWynf29YQkbYGqG
+        yLU2d3d3/0z7PD8/dzsVZAkbIDqVEWsNyrlHmv37+/sh1x+WsIGtJqopN0ZYBOx5GsgSNrCVhERXSUj5
+        NMU9YwkboO/28fEx5NYD8ZCQUTFR8OfnZ9jTJ5awAUarWzSTkpD0/v4+bD1fvnNNRuXIyUsQ9x8VS7gQ
+        otNWUyZIRtlqkiNMCal55jhEPDq7S0jFUsFlYjsR4ChNz5arJSq7thxIPcXou9U97MnuvwDJaEpiJfOJ
+        gGzjTT+CiFtKOIUlXAmakNq8l0Q8wmhwi9WSOSAh1wb1DY9OSiREtNokr/YdoZ+jwcPecE0S9YSAPSzj
+        7S4hUxpUoN7mkrKp/q1stVpyjbI57oHdJVSTO1aResvnvOEcd0taM3JRFr9lb+gCWMJGJNkYEua3kyEh
+        rQd100M/MLL7056KSOoTHqGSy9USvTxHTlnsemVNa9CfqqEVgSOMjrnP3prFLHaVUM3J2Hor/Z1bHi7H
+        3pLW7BNSXo9/MM1gVwkZTfLwaiNfCZox4rwVRXSzDrvW5NgkNRGFfV4t+T/ZrSYRrYx0bKP/x3aayiMI
+        CPRdM1ZLemUXCZFN/b2YiH5IebS/I2WtlvSK25QFIOFv7rse7Z/YlnABUxPVMeoT6ceWJ6FsGZRiy8B1
+        tJRJQn6uIdgfzyUdLUpbwgWMSUifFvG0T/OeY1NSHBv7wcgVB26aMdCUFbMK7I+Sca3avRwJS7gARKiJ
+        JWkiHDvWdMeIBsgVoyD5MqohHPKKuRIiMmWVgz/Oze6TW8IFxOgUoS9WjpprItWgvBgFQZG0jIRRujkS
+        Ug7iltIDZZcReW8sYQVFjZpogBi1B1oTbq6EHFOLSIquSkTVKAwCIqb28xLEKI24bNdv4Vzy8Vrkp/qu
+        W2MJA5JPD7UmD8ewrwaClNFsjoSUWYtGimASqNYn5BytQPGde+AcbSujs+5f+4H8tWi6JZYwQHTTA5eI
+        Zd9vSkIeJPuiTAhwbcoEqWoS1ATWNcbQ/el3cH68Pn8eiS8Kv6/2O/fEEo6gh1NGNqJTuU2o6dO/hFSG
+        hJAgUVKOGeuTIU8ZCZE6ikl5akopQ+eoPEVn8rxk7FNe5cVImYElnICHzUOO/SciURmdIkjFQ+Y8PuO5
+        kjA2hRwz1hRGqTiPT/ISDMjreiSki/1Vvut36H54ScbKy8ASTiBpYmS5JuEUCLD03J6xhFcgUiCiohUS
+        jUWua5QjW/MXS3gF9fOIhnxvkdDUsYQzQDpEJCrSiY/9PNOOJZwBTagGBySNVs06WMKZxJULS7gulvAG
+        NBVi1sU1egOafDbr4ho16VhCk44lNOlYQpOOJTTpWEKTjiU06VhCk44lNMmcz38A5sI9fEZkWdAAAAAA
+        SUVORK5CYII=
 </value>
   </data>
   <data name="pictureBox12.ToolTip" xml:space="preserve">
@@ -136,6 +153,58 @@ wT — скорость газов в горловине при рабочих �
   </data>
   <data name="pictureBox11.ToolTip" xml:space="preserve">
     <value>Средняя разность температур газа и воды в скруббере ("С) где Тн = 20°С — начальная температура воды; Тк = 55°С — конечная температура воды (принимается на 5—10 градусов ниже температуры мокрого термометра).
+</value>
+  </data>
+  <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        LmlxVgAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>
