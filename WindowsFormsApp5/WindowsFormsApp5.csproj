@@ -253,5 +253,8 @@
   <ItemGroup>
     <None Include="Resources\JYZok-ttRCc.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок экрана 2021-10-21 000125.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -250,7 +250,7 @@
   <data name="V0c" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\v0c1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="JYZok_ttRCc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\JYZok-ttRCc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Снимок_экрана_2021_10_21_000125" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Снимок экрана 2021-10-21 000125.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

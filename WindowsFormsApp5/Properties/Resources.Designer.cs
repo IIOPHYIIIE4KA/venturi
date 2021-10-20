@@ -383,16 +383,6 @@ namespace WindowsFormsApp5.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap JYZok_ttRCc {
-            get {
-                object obj = ResourceManager.GetObject("JYZok_ttRCc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap K0 {
             get {
                 object obj = ResourceManager.GetObject("K0", resourceCulture);
@@ -506,6 +496,16 @@ namespace WindowsFormsApp5.Properties {
         internal static System.Drawing.Bitmap X2 {
             get {
                 object obj = ResourceManager.GetObject("X2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Снимок_экрана_2021_10_21_000125 {
+            get {
+                object obj = ResourceManager.GetObject("Снимок_экрана_2021_10_21_000125", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

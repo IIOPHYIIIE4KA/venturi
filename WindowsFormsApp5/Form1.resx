@@ -124,40 +124,6 @@
     <value>126, 9</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox18.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKEAAABGCAYAAACkEPSMAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAQ
-        PQAAED0BQ5F11wAABNJJREFUeF7tmgtx4zAURUOhGEqhHAqhGEqhDMqgDIqgCEqgBMqgHLJzsr4zb7Sy
-        41i2X629Z0aTyB/ZkY+ffjmdjUnGEpp0LKFJxxKadCyhSccSmnQsoUnHEpp0LKFJxxKadCyhSccSmnQs
-        oUnHEpp0LGEjj4+P59Pp1EXKwhI2goSvr69DzizBEjZCBPn8/BxyZgmWsBFL2I4lbOD7+/siIZ9mOZaw
-        ASJgZoe+F1yDDWwhYRxtv729XbYp4ir1hiVsAEkeHh6G3Dp8fX1dRHt6ehq2/OXl5eWynf29YQkbYGqG
-        yLU2d3d3/0z7PD8/dzsVZAkbIDqVEWsNyrlHmv37+/sh1x+WsIGtJqopN0ZYBOx5GsgSNrCVhERXSUj5
-        NMU9YwkboO/28fEx5NYD8ZCQUTFR8OfnZ9jTJ5awAUarWzSTkpD0/v4+bD1fvnNNRuXIyUsQ9x8VS7gQ
-        otNWUyZIRtlqkiNMCal55jhEPDq7S0jFUsFlYjsR4ChNz5arJSq7thxIPcXou9U97MnuvwDJaEpiJfOJ
-        gGzjTT+CiFtKOIUlXAmakNq8l0Q8wmhwi9WSOSAh1wb1DY9OSiREtNokr/YdoZ+jwcPecE0S9YSAPSzj
-        7S4hUxpUoN7mkrKp/q1stVpyjbI57oHdJVSTO1aResvnvOEcd0taM3JRFr9lb+gCWMJGJNkYEua3kyEh
-        rQd100M/MLL7056KSOoTHqGSy9USvTxHTlnsemVNa9CfqqEVgSOMjrnP3prFLHaVUM3J2Hor/Z1bHi7H
-        3pLW7BNSXo9/MM1gVwkZTfLwaiNfCZox4rwVRXSzDrvW5NgkNRGFfV4t+T/ZrSYRrYx0bKP/x3aayiMI
-        CPRdM1ZLemUXCZFN/b2YiH5IebS/I2WtlvSK25QFIOFv7rse7Z/YlnABUxPVMeoT6ceWJ6FsGZRiy8B1
-        tJRJQn6uIdgfzyUdLUpbwgWMSUifFvG0T/OeY1NSHBv7wcgVB26aMdCUFbMK7I+Sca3avRwJS7gARKiJ
-        JWkiHDvWdMeIBsgVoyD5MqohHPKKuRIiMmWVgz/Oze6TW8IFxOgUoS9WjpprItWgvBgFQZG0jIRRujkS
-        Ug7iltIDZZcReW8sYQVFjZpogBi1B1oTbq6EHFOLSIquSkTVKAwCIqb28xLEKI24bNdv4Vzy8Vrkp/qu
-        W2MJA5JPD7UmD8ewrwaClNFsjoSUWYtGimASqNYn5BytQPGde+AcbSujs+5f+4H8tWi6JZYwQHTTA5eI
-        Zd9vSkIeJPuiTAhwbcoEqWoS1ATWNcbQ/el3cH68Pn8eiS8Kv6/2O/fEEo6gh1NGNqJTuU2o6dO/hFSG
-        hJAgUVKOGeuTIU8ZCZE6ikl5akopQ+eoPEVn8rxk7FNe5cVImYElnICHzUOO/SciURmdIkjFQ+Y8PuO5
-        kjA2hRwz1hRGqTiPT/ISDMjreiSki/1Vvut36H54ScbKy8ASTiBpYmS5JuEUCLD03J6xhFcgUiCiohUS
-        jUWua5QjW/MXS3gF9fOIhnxvkdDUsYQzQDpEJCrSiY/9PNOOJZwBTagGBySNVs06WMKZxJULS7gulvAG
-        NBVi1sU1egOafDbr4ho16VhCk44lNOlYQpOOJTTpWEKTjiU06VhCk44lNMmcz38A5sI9fEZkWdAAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
-  <data name="pictureBox12.ToolTip" xml:space="preserve">
-    <value>Расход воды на скруббер (кг/с) где гп = 2778 кДж/кг — энтальпия насыщенного пара при средней температуре газа в скруббере Гср = 180°С; i„ = 84 кДж/кг — энтальпия воды при Т = 20°С; гк. = 230 кДж/кт — энтальпия воды при Т= 55°С.</value>
-  </data>
-  <data name="pictureBox11.ToolTip" xml:space="preserve">
-    <value>Средняя разность температур газа и воды в скруббере ("С) где Тн = 20°С — начальная температура воды; Тк = 55°С — конечная температура воды (принимается на 5—10 градусов ниже температуры мокрого термометра).
-</value>
-  </data>
   <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQQAAAAyCAYAAAC6XKUOAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAQ
@@ -208,6 +174,40 @@
         n2vflRAajJnnMXiVjbMpFca3QW/pxNuDo+1dx/d4C3Z7DjvMSKKJ38UX8x2TROBR0nttSQgZ8xS7roSw
         WLxy+iPDU1gJYbF45bgtrISwWCzuyZeMz/G9zEoIi8XikZUQFovFIyshLBaLR1ZCWCwWD9zd/Q+qCmyV
         LmlxVgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="pictureBox18.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAKEAAABGCAYAAACkEPSMAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAQ
+        PQAAED0BQ5F11wAABNJJREFUeF7tmgtx4zAURUOhGEqhHAqhGEqhDMqgDIqgCEqgBMqgHLJzsr4zb7Sy
+        41i2X629Z0aTyB/ZkY+ffjmdjUnGEpp0LKFJxxKadCyhSccSmnQsoUnHEpp0LKFJxxKadCyhSccSmnQs
+        oUnHEpp0LGEjj4+P59Pp1EXKwhI2goSvr69DzizBEjZCBPn8/BxyZgmWsBFL2I4lbOD7+/siIZ9mOZaw
+        ASJgZoe+F1yDDWwhYRxtv729XbYp4ir1hiVsAEkeHh6G3Dp8fX1dRHt6ehq2/OXl5eWynf29YQkbYGqG
+        yLU2d3d3/0z7PD8/dzsVZAkbIDqVEWsNyrlHmv37+/sh1x+WsIGtJqopN0ZYBOx5GsgSNrCVhERXSUj5
+        NMU9YwkboO/28fEx5NYD8ZCQUTFR8OfnZ9jTJ5awAUarWzSTkpD0/v4+bD1fvnNNRuXIyUsQ9x8VS7gQ
+        otNWUyZIRtlqkiNMCal55jhEPDq7S0jFUsFlYjsR4ChNz5arJSq7thxIPcXou9U97MnuvwDJaEpiJfOJ
+        gGzjTT+CiFtKOIUlXAmakNq8l0Q8wmhwi9WSOSAh1wb1DY9OSiREtNokr/YdoZ+jwcPecE0S9YSAPSzj
+        7S4hUxpUoN7mkrKp/q1stVpyjbI57oHdJVSTO1aResvnvOEcd0taM3JRFr9lb+gCWMJGJNkYEua3kyEh
+        rQd100M/MLL7056KSOoTHqGSy9USvTxHTlnsemVNa9CfqqEVgSOMjrnP3prFLHaVUM3J2Hor/Z1bHi7H
+        3pLW7BNSXo9/MM1gVwkZTfLwaiNfCZox4rwVRXSzDrvW5NgkNRGFfV4t+T/ZrSYRrYx0bKP/x3aayiMI
+        CPRdM1ZLemUXCZFN/b2YiH5IebS/I2WtlvSK25QFIOFv7rse7Z/YlnABUxPVMeoT6ceWJ6FsGZRiy8B1
+        tJRJQn6uIdgfzyUdLUpbwgWMSUifFvG0T/OeY1NSHBv7wcgVB26aMdCUFbMK7I+Sca3avRwJS7gARKiJ
+        JWkiHDvWdMeIBsgVoyD5MqohHPKKuRIiMmWVgz/Oze6TW8IFxOgUoS9WjpprItWgvBgFQZG0jIRRujkS
+        Ug7iltIDZZcReW8sYQVFjZpogBi1B1oTbq6EHFOLSIquSkTVKAwCIqb28xLEKI24bNdv4Vzy8Vrkp/qu
+        W2MJA5JPD7UmD8ewrwaClNFsjoSUWYtGimASqNYn5BytQPGde+AcbSujs+5f+4H8tWi6JZYwQHTTA5eI
+        Zd9vSkIeJPuiTAhwbcoEqWoS1ATWNcbQ/el3cH68Pn8eiS8Kv6/2O/fEEo6gh1NGNqJTuU2o6dO/hFSG
+        hJAgUVKOGeuTIU8ZCZE6ikl5akopQ+eoPEVn8rxk7FNe5cVImYElnICHzUOO/SciURmdIkjFQ+Y8PuO5
+        kjA2hRwz1hRGqTiPT/ISDMjreiSki/1Vvut36H54ScbKy8ASTiBpYmS5JuEUCLD03J6xhFcgUiCiohUS
+        jUWua5QjW/MXS3gF9fOIhnxvkdDUsYQzQDpEJCrSiY/9PNOOJZwBTagGBySNVs06WMKZxJULS7gulvAG
+        NBVi1sU1egOafDbr4ho16VhCk44lNOlYQpOOJTTpWEKTjiU06VhCk44lNMmcz38A5sI9fEZkWdAAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="pictureBox12.ToolTip" xml:space="preserve">
+    <value>Расход воды на скруббер (кг/с) где гп = 2778 кДж/кг — энтальпия насыщенного пара при средней температуре газа в скруббере Гср = 180°С; i„ = 84 кДж/кг — энтальпия воды при Т = 20°С; гк. = 230 кДж/кт — энтальпия воды при Т= 55°С.</value>
+  </data>
+  <data name="pictureBox11.ToolTip" xml:space="preserve">
+    <value>Средняя разность температур газа и воды в скруббере ("С) где Тн = 20°С — начальная температура воды; Тк = 55°С — конечная температура воды (принимается на 5—10 градусов ниже температуры мокрого термометра).
 </value>
   </data>
 </root>
