@@ -1,30 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp5
 {
-  
+
     public partial class Form1 : Form
     {
-        
+
+        private Scrubber scrubber = null;
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
 
         private bool alreadyExist(string _text, ref char KeyChar)
         {
@@ -45,7 +37,7 @@ namespace WindowsFormsApp5
         {
             if (!char.IsControl(e.KeyChar)
                     && !char.IsDigit(e.KeyChar)
-                    &&  e.KeyChar != ',')
+                    && e.KeyChar != ',')
             {
                 e.Handled = true;
             }
@@ -96,44 +88,287 @@ namespace WindowsFormsApp5
             {
                 validateTextbox(sender as TextBox, e);
             }
-            
-        }
-
-        private void pgtextBox2_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
-
-        private void label1_Click(object sender, EventArgs e)
+        class Scrubber
         {
+            public Double V0c { get; set; }
+            public Double tM { get; set; }
+            public Double i1 { get; set; }
+            public Double i2 { get; set; }
+            public Double Q { get; set; }
+            public Double dTavg { get; set; }
+            public Double Mb { get; set; }
+            public Double x2 { get; set; }
+            public Double Vg { get; set; }
+            public Double p2 { get; set; }
+            public Double k0 { get; set; }
+            public Double vc { get; set; }
+            public Double d { get; set; }
+            public Double h { get; set; }
+            public Double hd { get; set; }
+            public Double Kch { get; set; }
+            public Double Nch { get; set; }
+            public Double n { get; set; }
+            public Double iP { get; set; }
+            public Double tk { get; set; }
+            public Double i { get; set; }
 
+            public Double Vgg { get; set; }
+            public Double Pbar { get; set; }
+            public Double T { get; set; }
+            public Double X { get; set; }
+            public Double Wg { get; set; }
+            public Double Pb { get; set; }
+            public Double Fi { get; set; }
+            public Double P0 { get; set; }
+            public Double Pg { get; set; }
+
+            public Scrubber(Double Vgg, Double Pbar, Double T, Double X, Double Wg, Double Pb, Double Fi, Double P0, Double Pg)
+            {
+                this.Vgg = Vgg;
+                this.Pbar = Pbar;
+                this.T = T;
+                this.X = X;
+                this.Pb = Pb;
+                this.Fi = Fi;
+                this.P0 = P0;
+                this.Pg = Pg;
+                this.Wg = Wg;
+            }
+
+            public void calculate()
+            {
+                tM = getTemp(X * 1000, T);
+                V0c = (Vgg * 0.804 * 274 * (Pbar - Pg)) / (tM * (0.804 + X) * (273 + T) * Pbar);
+                i1 = 2480 + T * 1.96;
+                i2 = 2489 + tM * 1.96;
+                iP = (i1 + i2) / 2;
+                Q = V0c * (1.3 * (T - tM) + X * (i1 - i2));
+                dTavg = ((T - tM - 5) - (tM - 20)) / (2.3 * Math.Log10((T - tM - 5) / (tM - 20)));
+                tk = tM - 5;
+                i = entropy(tk);
+                Mb = Q / (Fi * (iP - i) + (1 - 0.5) * (230 - i));
+                x2 = X + (Fi * Mb) / V0c;
+                Vg = V0c * (((0.804 + x2) * (273 + tM) * Pbar) / (0.804 * 273 * (Pbar + Pg)));
+                p2 = ((P0 + x2) * 0.804 * 273 * (Pbar + Pg)) / ((0.804 + x2) * (273 + tM) * Pbar);
+                k0 = (116 + 525 * ((Mb) / (Vg * p2))) * (1 + 0.001 * 113);
+                vc = Q * 1000 / (k0 * dTavg);
+                d = Math.Sqrt(Vg / (0.785 * Wg));
+                h = 2.5 * d;
+            }
+
+            private static Double entropy(double t)
+            {
+                Double i = 0;
+                if (t == 0)
+                {
+                    i = 0;
+                }
+                if (t <= 10)
+                {
+                    i = 42.04;
+                }
+                if (t <= 20)
+                {
+                    i = 83.91;
+                }
+                if (t <= 30)
+                {
+                    i = 125.7;
+                }
+                if (t <= 40)
+                {
+                    i = 167.5;
+                }
+                if (t <= 50)
+                {
+                    i = 209.3;
+                }
+                if (t <= 55)
+                {
+                    i = 230;
+                }
+                if (t <= 60)
+                {
+                    i = 251.1;
+                }
+                if (t <= 70)
+                {
+                    i = 293;
+                }
+                if (t <= 80)
+                {
+                    i = 355;
+                }
+                if (t <= 90)
+                {
+                    i = 377;
+                }
+                if (t <= 100)
+                {
+                    i = 419.1;
+                }
+                return i;
+            }
+
+            private static double getTemp(double v, double t)
+            {
+                double tt = 0;
+                if (v >= 25)
+                {
+                    if (t >= 100)
+                    {
+                        tt = 38.5;
+                    }
+                    if (t >= 200)
+                    {
+                        tt = 49.5;
+                    }
+                    if (t >= 300)
+                    {
+                        tt = 57;
+                    }
+                    if (t >= 400)
+                    {
+                        tt = 62;
+                    }
+                    if (t >= 500)
+                    {
+                        tt = 65;
+                    }
+                    if (t >= 750)
+                    {
+                        tt = 72.5;
+                    }
+                    if (t >= 1000)
+                    {
+                        tt = 77.5;
+                    }
+                }
+                if (v >= 50)
+                {
+                    if (t >= 100)
+                    {
+                        tt = 44;
+                    }
+                    if (t >= 200)
+                    {
+                        tt = 53;
+                    }
+                    if (t >= 300)
+                    {
+                        tt = 59.5;
+                    }
+                    if (t >= 400)
+                    {
+                        tt = 64;
+                    }
+                    if (t >= 500)
+                    {
+                        tt = 67.5;
+                    }
+                    if (t >= 750)
+                    {
+                        tt = 74;
+                    }
+                    if (t >= 1000)
+                    {
+                        tt = 78.5;
+                    }
+                }
+                if (v >= 100)
+                {
+                    if (t >= 100)
+                    {
+                        tt = 52.5;
+                    }
+                    if (t >= 200)
+                    {
+                        tt = 59;
+                    }
+                    if (t >= 300)
+                    {
+                        tt = 63.5;
+                    }
+                    if (t >= 400)
+                    {
+                        tt = 68;
+                    }
+                    if (t >= 500)
+                    {
+                        tt = 70.5;
+                    }
+                    if (t >= 750)
+                    {
+                        tt = 76.5;
+                    }
+                    if (t >= 1000)
+                    {
+                        tt = 80.5;
+                    }
+                }
+                if (v >= 200)
+                {
+                    if (t >= 100)
+                    {
+                        tt = 61;
+                    }
+                    if (t >= 200)
+                    {
+                        tt = 66.5;
+                    }
+                    if (t >= 300)
+                    {
+                        tt = 70;
+                    }
+                    if (t >= 400)
+                    {
+                        tt = 72.5;
+                    }
+                    if (t >= 500)
+                    {
+                        tt = 75.5;
+                    }
+                    if (t >= 750)
+                    {
+                        tt = 79.5;
+                    }
+                    if (t >= 1000)
+                    {
+                        tt = 0;
+                    }
+                }
+                if (v >= 300)
+                {
+                    if (t >= 100)
+                    {
+                        tt = 68;
+                    }
+                    if (t >= 200)
+                    {
+                        tt = 71.5;
+                    }
+                    if (t >= 300)
+                    {
+                        tt = 74;
+                    }
+                    if (t >= 400)
+                    {
+                        tt = 78.5;
+                    }
+                    if (t >= 500)
+                    {
+                        tt = 0;
+                    }
+                }
+                return tt;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Double V0c = 0;
-            Double tM = 0;
-            Double i1 = 0;
-            Double i2 = 0;
-            Double Q = 0;
-            Double dTavg = 0;
-            Double Mb = 0;
-            Double x2 = 0;
-            Double Vg = 0;
-            Double p2 = 0;
-            Double k0 = 0;
-            Double vc = 0;
-            Double d = 0;
-            Double h = 0;
-            Double hd = 0;
-            Double Kch = 0;
-            Double Nch = 0;
-            Double n = 0;
-            Double iP = 0;
-            Double tk = 0;
-            Double i = 0;
-
             Double Vgg = 0;
             Double Pbar = 0;
             Double T = 0;
@@ -154,49 +389,35 @@ namespace WindowsFormsApp5
                 P0 = Convert.ToDouble(dPtext.Text);
                 Pg = Convert.ToDouble(pgTextt.Text);
                 Wg = Convert.ToDouble(wGtext.Text);
+                scrubber = new Scrubber(Vgg, Pbar, T, X, Wg, Pb, Fi, P0, Pg);
+                scrubber.calculate();
 
-                tM = getTemp(X * 1000, T);
-                V0c = (Vgg * 0.804*274*(Pbar-Pg))/(tM*(0.804+X)*(273+T)*Pbar);
-                i1 = 2480+ T*1.96;
-                i2 = 2489 + tM * 1.96;
-                iP = (i1 + i2) / 2;
-                Q = V0c*(1.3*(T-tM)+X*(i1-i2));
-                dTavg = ((T - tM - 5) - (tM - 20)) / (2.3 * Math.Log10((T - tM - 5) / (tM - 20)));
-                tk = tM - 5;
-                i = entropy(tk);
-                Mb = Q/(Fi*(iP-i) + (1-0.5)*(230-i));
-                x2 = X  + (Fi*Mb)/V0c;
-                Vg = V0c*(((0.804+x2)*(273+tM)*Pbar)/(0.804*273*(Pbar+Pg)));
-                p2 = ((P0+x2)*0.804*273*(Pbar+Pg))/((0.804+x2)*(273+tM)*Pbar);
-                k0 = (116+525*((Mb)/(Vg*p2)))*(1+0.001*113);
-                vc = Q*1000/(k0*dTavg);
-                d = Math.Sqrt(Vg/(0.785*Wg));
-                h = 2.5*d;
-                v0Label.Text = "= " + Math.Round(V0c, 2).ToString();
+               
+                v0Label.Text = "= " + Math.Round(scrubber.V0c, 2).ToString();
                 String tm = "";
-                if (tM == 0)
+                if (scrubber.tM == 0)
                 {
                     tm = "-";
                 } else
                 {
-                    tm = Math.Round(tM, 2).ToString();
+                    tm = Math.Round(scrubber.tM, 2).ToString();
                 }
                 tmLabel.Text = "Температура мокрого термометра °С = " + tm;
-                i1Label.Text = "= " + Math.Round(i1, 2).ToString();
-                i2Label.Text = "= " + Math.Round(i2, 2).ToString();
-                qLabel.Text = "= " + Math.Round(Q, 2).ToString();
-                dTlabel.Text = "= " + Math.Round(dTavg, 2).ToString();
-                mBlabel.Text = "= " + Math.Round(Mb, 2).ToString();
-                x2Label.Text = "= " + Math.Round(x2, 2).ToString();
-                vgLabel.Text = "= " + Math.Round(Vg, 2).ToString();
-                p2Label.Text = "= " + Math.Round(p2, 2).ToString();
-                k0Label.Text = "= " + Math.Round(k0, 2).ToString();
-                vClabel.Text = "= " + Math.Round(vc, 2).ToString();
-                dLabel.Text = "= " + Math.Round(d, 2).ToString();
-                hLabel.Text = "= " + Math.Round(h, 2).ToString();
-                p2Label.Text = "= " + Math.Round(p2, 2).ToString();
-                vClabel.Text = "= " + Math.Round(vc, 2).ToString();
-                dLabel.Text = "= " + Math.Round(d, 2).ToString();
+                i1Label.Text = "= " + Math.Round(scrubber.i1, 2).ToString();
+                i2Label.Text = "= " + Math.Round(scrubber.i2, 2).ToString();
+                qLabel.Text = "= " + Math.Round(scrubber.Q, 2).ToString();
+                dTlabel.Text = "= " + Math.Round(scrubber.dTavg, 2).ToString();
+                mBlabel.Text = "= " + Math.Round(scrubber.Mb, 2).ToString();
+                x2Label.Text = "= " + Math.Round(scrubber.x2, 2).ToString();
+                vgLabel.Text = "= " + Math.Round(scrubber.Vg, 2).ToString();
+                p2Label.Text = "= " + Math.Round(scrubber.p2, 2).ToString();
+                k0Label.Text = "= " + Math.Round(scrubber.k0, 2).ToString();
+                vClabel.Text = "= " + Math.Round(scrubber.vc, 2).ToString();
+                dLabel.Text = "= " + Math.Round(scrubber.d, 2).ToString();
+                hLabel.Text = "= " + Math.Round(scrubber.h, 2).ToString();
+                p2Label.Text = "= " + Math.Round(scrubber.p2, 2).ToString();
+                vClabel.Text = "= " + Math.Round(scrubber.vc, 2).ToString();
+                dLabel.Text = "= " + Math.Round(scrubber.d, 2).ToString();
             }
             catch (FormatException ex)
             {
@@ -208,334 +429,93 @@ namespace WindowsFormsApp5
             }
         }
 
-        private Double entropy(double t)
+
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Double i = 0;
-            if (i == 0)
-            {
-                i = 0;
-            }
-            if (i <= 10)
-            {
-                i = 42.04;
-            }
-            if (i <= 20)
-            {
-                i = 83.91;
-            }
-            if (i <= 30)
-            {
-                i = 125.7;
-            }
-            if (i <= 40)
-            {
-                i = 167.5;
-            }
-            if (i <= 50)
-            {
-                i = 209.3;
-            }
-            if (i <= 55)
-            {
-                i = 230;
-            }
-            if (i <= 60)
-            {
-                i = 251.1;
-            }
-            if (i <= 70)
-            {
-                i = 293; 
-            }
-            if (i <= 80)
-            {
-                i = 355;
-            }
-            if (i <= 90)
-            {
-                i = 377;
-            }
-            if (i <= 100)
-            {
-                i = 419.1;
-            }
-            return i;
+            this.Close();
         }
 
-        private double getTemp(double v, double t)
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            double tt = 0;
-            if (v >= 25)
+            if (scrubber == null)
             {
-                if (t >= 100)
-                {
-                    tt = 38.5;
-                }
-                if (t >= 200)
-                {
-                    tt = 49.5;
-                }
-                if (t >= 300)
-                {
-                    tt = 57;
-                }
-                if (t >= 400)
-                {
-                    tt = 62;
-                }
-                if (t >= 500)
-                {
-                    tt = 65;
-                }
-                if (t >= 750)
-                {
-                    tt = 72.5;
-                }
-                if (t >= 1000)
-                {
-                    tt = 77.5;
-                }
-            } 
-            if (v >= 50)
-            {
-                if (t >= 100)
-                {
-                    tt = 44;
-                }
-                if (t >= 200)
-                {
-                    tt = 53;
-                }
-                if (t >= 300)
-                {
-                    tt = 59.5;
-                }
-                if (t >= 400)
-                {
-                    tt = 64;
-                }
-                if (t >= 500)
-                {
-                    tt = 67.5;
-                }
-                if (t >= 750)
-                {
-                    tt = 74;
-                }
-                if (t >= 1000)
-                {
-                    tt = 78.5;
-                }
-            } 
-            if (v>=100)
-            {
-                if (t >= 100)
-                {
-                    tt = 52.5;
-                }
-                if (t >= 200)
-                {
-                    tt = 59;
-                }
-                if (t >= 300)
-                {
-                    tt = 63.5;
-                }
-                if (t >= 400)
-                {
-                    tt = 68;
-                }
-                if (t >= 500)
-                {
-                    tt = 70.5;
-                }
-                if (t >= 750)
-                {
-                    tt = 76.5;
-                }
-                if (t >= 1000)
-                {
-                    tt = 80.5;
-                }
-            } 
-            if (v>=200)
-            {
-                if (t >= 100)
-                {
-                    tt = 61;
-                }
-                if (t >= 200)
-                {
-                    tt = 66.5;
-                }
-                if (t >= 300)
-                {
-                    tt = 70;
-                }
-                if (t >= 400)
-                {
-                    tt = 72.5;
-                }
-                if (t >= 500)
-                {
-                    tt = 75.5;
-                }
-                if (t >= 750)
-                {
-                    tt = 79.5;
-                }
-                if (t >= 1000)
-                {
-                    tt = 0;
-                }
+                _ = MessageBox.Show("Сначала проведите расчеты");
+                return;
             }
-            if (v>=300)
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "Json|*.json";
+            saveFileDialog1.ShowDialog();
+
+            if (saveFileDialog1.FileName != "")
             {
-                if (t >= 100)
+                try
                 {
-                    tt = 68;
-                }
-                if (t >= 200)
+                    string jsonString = JsonSerializer.Serialize(scrubber);
+                    File.WriteAllText(saveFileDialog1.FileName, jsonString);
+                    _ = MessageBox.Show("Сохранено");
+                } catch (Exception ex)
                 {
-                    tt = 71.5;
+                    _ = MessageBox.Show(ex.Message);
                 }
-                if (t >= 300)
-                {
-                    tt = 74;
-                }
-                if (t >= 400)
-                {
-                    tt = 78.5;
-                }
-                if (t >= 500)
-                {
-                    tt = 0;
-                }
-            }
-            return tt;
-        }
-
-
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pBartext_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Vgtext_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void xText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pBtext_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void wGtext_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fiText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dPtext_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        class GVPB
-        {
-            public GVPB(String S, String P, String D, String R, String razm, String m)
-            {
-                this.S = S;
-                this.P = P;
-                this.D = D;
-                this.R = R;
-                this.razm = razm;
-                this.m = m;
-            }
-            String S;
-            String P;
-            String D;
-            String R;
-            String razm;
-            String m;
-            public override string ToString()
-            {
-                return $"Площадь сечения горловины, {S} м2 \n " +
-                    $"Производительность, {P} м/ч \n " +
-                    $"Диаметр горловины, {D} мм \n " +
-                    $"Расход орошающей жидкости {R} \n " +
-                    $"Габаритные размеры ШХГХВ, {razm} мм \n " +
-                    $"Масса, {m} кг";
+                
             }
         }
 
-        private GVPB typeRazm(Double d)
+        private void загрузитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (d >= 0.006)
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Json|*.json";
+            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
+            if (result == DialogResult.OK) // Test result.
             {
-                return new GVPB("0,006", "1700-3500", "85", "1,2-6,8", "560Х445Х1850", "70");
+                string file = openFileDialog1.FileName;
+                try
+                {
+                    string text = File.ReadAllText(file);
+                    scrubber = JsonSerializer.Deserialize<Scrubber>(text);
+                    v0Label.Text = "= " + Math.Round(scrubber.V0c, 2).ToString();
+                    String tm = "";
+                    if (scrubber.tM == 0)
+                    {
+                        tm = "-";
+                    }
+                    else
+                    {
+                        tm = Math.Round(scrubber.tM, 2).ToString();
+                    }
+                    Vgtext.Text = Convert.ToString(scrubber.Vgg);
+                    pBartext.Text = Convert.ToString(scrubber.Pbar);
+                    tText.Text = Convert.ToString(scrubber.T);
+                    xText.Text = Convert.ToString(scrubber.X * 1000);
+                    pBtext.Text = Convert.ToString(scrubber.Pb);
+                    fiText.Text = Convert.ToString(scrubber.Fi);
+                    dPtext.Text = Convert.ToString(scrubber.P0);
+                    pgTextt.Text = Convert.ToString(scrubber.Pg);
+                    wGtext.Text = Convert.ToString(scrubber.Wg);
+                    tmLabel.Text = "Температура мокрого термометра °С = " + tm;
+                    i1Label.Text = "= " + Math.Round(scrubber.i1, 2).ToString();
+                    i2Label.Text = "= " + Math.Round(scrubber.i2, 2).ToString();
+                    qLabel.Text = "= " + Math.Round(scrubber.Q, 2).ToString();
+                    dTlabel.Text = "= " + Math.Round(scrubber.dTavg, 2).ToString();
+                    mBlabel.Text = "= " + Math.Round(scrubber.Mb, 2).ToString();
+                    x2Label.Text = "= " + Math.Round(scrubber.x2, 2).ToString();
+                    vgLabel.Text = "= " + Math.Round(scrubber.Vg, 2).ToString();
+                    p2Label.Text = "= " + Math.Round(scrubber.p2, 2).ToString();
+                    k0Label.Text = "= " + Math.Round(scrubber.k0, 2).ToString();
+                    vClabel.Text = "= " + Math.Round(scrubber.vc, 2).ToString();
+                    dLabel.Text = "= " + Math.Round(scrubber.d, 2).ToString();
+                    hLabel.Text = "= " + Math.Round(scrubber.h, 2).ToString();
+                    p2Label.Text = "= " + Math.Round(scrubber.p2, 2).ToString();
+                    vClabel.Text = "= " + Math.Round(scrubber.vc, 2).ToString();
+                    dLabel.Text = "= " + Math.Round(scrubber.d, 2).ToString();
+                    _ = MessageBox.Show("Загружено");
+                }
+                catch (IOException ex)
+                {
+                    _ = MessageBox.Show(ex.Message);
+                }
             }
-            if (d >= 0.010)
-            {
-                return new GVPB("0,010", "3100-6500", "115", "2,9-12", "670Х540Х2500", "120");
-            }
-            if (d >= 0.014)
-            {
-                return new GVPB("0,014", "4140-8400", "135", "3,9-17", "700Х575Х2940", "150");
-            }
-            if (d >= 0.019)
-            {
-                return new GVPB("0,019", "5590-113450", "155", "5,2-23", "765Х645Х3140", "175");
-            }
-            if (d >= 0.025)
-            {
-                return new GVPB("0,025", "7450-15120", "180", "6,5-30", "795Х775Х3790", "257");
-            }
-            if (d >= 0.030)
-            {
-                return new GVPB("0,030", "7450-15120", "200", "10-38", "1355Х790Х4025", "310");
-            }
-            if (d >= 0.045)
-            {
-                return new GVPB("0,045", "9320-18900", "240", "13-56", "1420Х880Х4620", "420");
-            }
-            if (d >= 0.060)
-            {
-                return new GVPB("0,070", "13800-28000", "280", "17-75", "1630Х1075Х5425", "560");
-            }
-            if (d >= 0.080)
-            {
-                return new GVPB("0,080", "18630-37800", "320", "23-95", "1545Х1480Х5940", "675");
-            }
-            if (d >= 0.100)
-            {
-                return new GVPB("0,100", "23460-47600", "370", "29-132", "1860Х1835Х7550", "975");
-            }
-            if (d >= 0.140)
-            {
-                return new GVPB("0,140", "41400-84000", "420", "45-168", "2060Х2015Х9850", "1200");
-            }
-            return new GVPB("", "", "", "", "", "");
         }
     }
 }

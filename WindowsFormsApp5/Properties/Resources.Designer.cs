@@ -383,6 +383,16 @@ namespace WindowsFormsApp5.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap JYZok_ttRCc {
+            get {
+                object obj = ResourceManager.GetObject("JYZok_ttRCc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap K0 {
             get {
                 object obj = ResourceManager.GetObject("K0", resourceCulture);
