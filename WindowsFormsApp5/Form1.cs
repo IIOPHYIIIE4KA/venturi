@@ -33,6 +33,7 @@ namespace WindowsFormsApp5
             return false;
         }
 
+        //валидация textbox для формата чисел с точкой 
         private void validateTextbox(TextBox _text, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar)
@@ -91,8 +92,10 @@ namespace WindowsFormsApp5
 
         }
 
+        //класс скруббера
         class Scrubber
         {
+            //переменные для подсчета
             public Double V0c { get; set; }
             public Double tM { get; set; }
             public Double i1 { get; set; }
@@ -115,6 +118,7 @@ namespace WindowsFormsApp5
             public Double tk { get; set; }
             public Double i { get; set; }
 
+            //исходные данные
             public Double Vgg { get; set; }
             public Double Pbar { get; set; }
             public Double T { get; set; }
@@ -125,6 +129,7 @@ namespace WindowsFormsApp5
             public Double P0 { get; set; }
             public Double Pg { get; set; }
 
+            //конструктор для ввода исходных данных
             public Scrubber(Double Vgg, Double Pbar, Double T, Double X, Double Wg, Double Pb, Double Fi, Double P0, Double Pg)
             {
                 this.Vgg = Vgg;
@@ -138,6 +143,7 @@ namespace WindowsFormsApp5
                 this.Wg = Wg;
             }
 
+            //подсчет данных
             public void calculate()
             {
                 tM = getTemp(X * 1000, T);
@@ -159,6 +165,7 @@ namespace WindowsFormsApp5
                 h = 2.5 * d;
             }
 
+            //таблица энтропии
             private static Double entropy(double t)
             {
                 Double i = 0;
@@ -213,6 +220,7 @@ namespace WindowsFormsApp5
                 return i;
             }
 
+             //таблица мокрого термометра
             private static double getTemp(double v, double t)
             {
                 double tt = 0;
@@ -367,6 +375,7 @@ namespace WindowsFormsApp5
             }
         }
 
+        //кнопка подсчета
         private void button2_Click(object sender, EventArgs e)
         {
             Double Vgg = 0;
@@ -380,6 +389,7 @@ namespace WindowsFormsApp5
             Double Pg = 0;
             try
             {
+                //считывание исходных данных
                 Vgg = Convert.ToDouble(Vgtext.Text);
                 Pbar = Convert.ToDouble(pBartext.Text);
                 T = Convert.ToDouble(tText.Text);
@@ -389,10 +399,10 @@ namespace WindowsFormsApp5
                 P0 = Convert.ToDouble(dPtext.Text);
                 Pg = Convert.ToDouble(pgTextt.Text);
                 Wg = Convert.ToDouble(wGtext.Text);
+                //ввод и подсчет данных
                 scrubber = new Scrubber(Vgg, Pbar, T, X, Wg, Pb, Fi, P0, Pg);
                 scrubber.calculate();
-
-               
+                //вывод данных
                 v0Label.Text = "= " + Math.Round(scrubber.V0c, 2).ToString();
                 String tm = "";
                 if (scrubber.tM == 0)
@@ -443,6 +453,7 @@ namespace WindowsFormsApp5
                 _ = MessageBox.Show("Сначала проведите расчеты");
                 return;
             }
+            //диалог для сохранения подсчетов
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "Json|*.json";
             saveFileDialog1.ShowDialog();
@@ -451,7 +462,9 @@ namespace WindowsFormsApp5
             {
                 try
                 {
+                    //сериализация класса
                     string jsonString = JsonSerializer.Serialize(scrubber);
+                    //сохранение сериализованного класса в файл
                     File.WriteAllText(saveFileDialog1.FileName, jsonString);
                     _ = MessageBox.Show("Сохранено");
                 } catch (Exception ex)
@@ -464,16 +477,21 @@ namespace WindowsFormsApp5
 
         private void загрузитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //диалог для загрузки подсчетов
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Json|*.json";
             DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
             if (result == DialogResult.OK) // Test result.
             {
+
                 string file = openFileDialog1.FileName;
                 try
                 {
+                    //открытие файла
                     string text = File.ReadAllText(file);
+                    //десериализация класса
                     scrubber = JsonSerializer.Deserialize<Scrubber>(text);
+                    //вывод вычислений
                     v0Label.Text = "= " + Math.Round(scrubber.V0c, 2).ToString();
                     String tm = "";
                     if (scrubber.tM == 0)
