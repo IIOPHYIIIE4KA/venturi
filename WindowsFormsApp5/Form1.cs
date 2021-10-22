@@ -480,8 +480,8 @@ namespace WindowsFormsApp5
             //диалог для загрузки подсчетов
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Json|*.json";
-            DialogResult result = openFileDialog1.ShowDialog(); // Show the dialog.
-            if (result == DialogResult.OK) // Test result.
+            DialogResult result = openFileDialog1.ShowDialog(); // показываем диалог.
+            if (result == DialogResult.OK) // если файл выбран.
             {
 
                 string file = openFileDialog1.FileName;
